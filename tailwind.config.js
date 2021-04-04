@@ -3,6 +3,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontSize: {
+        xxxs: ".5rem",
+        xxs: ".6rem",
+        xss: "0.68rem",
+      },
       screens: {
         xs: "589px",
         sm: "640px",
@@ -17,9 +22,20 @@ module.exports = {
           200: "#FFB500",
           300: "#FF671F",
         },
+        gray: {
+          100: "#EDEDED",
+        },
+        blue: {
+          450: "#005DDA",
+          475: "#5497B5",
+          550: "#0D1325",
+        },
+        green: {
+          450: "#5BBD1F",
+        },
       },
       fontFamily: {
-        sena: ["JosefinSans-Medium"],
+        sena: ["Josefin Sans"],
       },
       maxHeight: {
         0: "0",
