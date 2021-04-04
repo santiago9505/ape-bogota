@@ -7,6 +7,8 @@ module.exports = {
         xxxs: ".5rem",
         xxs: ".6rem",
         xss: "0.68rem",
+        standard: "0.84rem",
+        titles: "0.9rem",
       },
       screens: {
         xs: "589px",

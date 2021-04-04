@@ -14,7 +14,7 @@ const Footer = () => {
           <br />
           CONTÁCTANOS DILIGENCIANDO EL SIGUIENTE FORMULARIO
         </h2>
-        <button className="underline bg-principal-100 rounded-xl text-white w-36 align-center p-1 mt-2">
+        <button className="underline bg-principal-100 text-sm rounded-3xl text-white w-40 align-center p-1 mt-2">
           Diligencia tus datos
         </button>
       </article>

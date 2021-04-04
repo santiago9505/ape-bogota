@@ -29,5 +29,15 @@ export const VacanciesItems = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt velit officiis, cupiditate numquam corrupti blanditiis? Nulla animi minima odite",
     fechaPublicacion: "24/03/2021",
   },
+  {
+    solicitud: "66666",
+    cargo: "LISBETH FUNCIONA",
+    educacion1: "técnicos",
+    educacion2: "tecnólogos",
+    educacion3: "profesionales",
+    descripcion:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt velit officiis, cupiditate numquam corrupti blanditiis? Nulla animi minima odite",
+    fechaPublicacion: "24/03/2021",
+  },
 ];
 export default VacanciesItems;

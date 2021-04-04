@@ -1,7 +1,7 @@
 export const Vacancies2Items = [
   {
     solicitud: "289274",
-    cargo: "auxiliar administrativo",
+    cargo: "AUXILIAR ADMINISTRATIVO",
     educacion1: "técnicos",
     educacion2: "tecnólogos",
     educacion3: "profesionales",
@@ -11,7 +11,7 @@ export const Vacancies2Items = [
   },
   {
     solicitud: "289275",
-    cargo: "auxiliar administrativo",
+    cargo: "AUXILIAR ADMINISTRATIVO",
     educacion1: "técnicos",
     educacion2: "tecnólogos",
     educacion3: "profesionales",
@@ -21,7 +21,7 @@ export const Vacancies2Items = [
   },
   {
     solicitud: "289276",
-    cargo: "auxiliar administrativo",
+    cargo: "AUXILIAR ADMINISTRATIVO",
     educacion1: "técnicos",
     educacion2: "tecnólogos",
     educacion3: "profesionales",

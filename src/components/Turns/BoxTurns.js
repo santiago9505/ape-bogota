@@ -3,7 +3,7 @@ import DataTurns from "./DataTurns.js";
 
 const BoxTurns = () => {
   return (
-    <div className="flex flex-col px-8 mx-4 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-xs">
+    <div className="flex flex-col px-8 mx-4 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-sm">
       <div className="flex justify-center">
         <table className="my-4 w-5/6">
           <tr className="">

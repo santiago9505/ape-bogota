@@ -7,7 +7,7 @@ class Title extends React.Component {
         <h1
           className={
             this.props.titleStyle +
-            " w-56 border-b-8 font-extrabold leading-3 px-2 pb-2 my-5 max-w-xs min-w-min border-2 font-sena text-left text-xs sm:my-7 sm:w-56 sm:text-sm"
+            " w-64 border-b-8 font-extrabold leading-4 px-2 pb-2 my-5 max-w-xs min-w-min border-2 font-sena text-left text-titles "
           }
         >
           <hr className={this.props.line} />

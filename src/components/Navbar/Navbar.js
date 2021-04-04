@@ -3,19 +3,19 @@ import React, { useState } from "react";
 //assets
 import Logo from "../../assets/static/logo-ape-blanco.svg";
 import MenuIcon from "../../assets/static/menu-icon.png";
-import MenuIcon2 from "../../assets/static/menu-icon2.svg";
+import MenuIcon2 from "../../assets/static/menu-icon2.png";
 import AudioStart from "../../audio/audio_accesible.mp3";
 
 const Navbar = () => {
   const navbarStyle =
-    "absolute flex flex-col w-5/12 gap-1 text-start border-2 text-xss py-4 px-2 text-2xl right-0.5 top-16 rounded-md bg-principal-100 sm:w-60 sm:top-28 sm:text-sm sm:gap-8 sm:px-4";
+    "absolute flex flex-col w-5/12 gap-1 text-start border-2 text-standard py-4 px-2 text-2xl right-0.5 top-16 rounded-md bg-principal-100 sm:w-60 sm:top-28 sm:text-sm sm:gap-8 sm:px-4";
   const [theme, setTheme] = useState(false);
   const handleClick = (e) => {
     e.preventDefault();
     setTheme(!theme);
   };
   return (
-    <nav className="bg-principal-100 border-b-4 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-red-500 md:bg-green-600 lg:bg-pink-500 xl:bg-yellow-500 2xl:bg-purpple-500 3xl:bg-gray-500">
+    <nav className="sticky top-0 bg-principal-100 border-b-4 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-red-500 md:bg-green-600 lg:bg-pink-500 xl:bg-yellow-500 2xl:bg-purpple-500 3xl:bg-gray-500">
       <article className="flex w-40 sm:w-44 md:w-2/12 md:max-w-xs">
         <img className="w-full" src={Logo} alt="logo" />
       </article>
