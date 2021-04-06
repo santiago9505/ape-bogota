@@ -8,19 +8,19 @@ import Complementaria from "../../assets/static/img-complementaria.jpg";
 
 const Type = () => {
   return (
-    <section className="flex flex-col bg-blue-550 text-white font-sena text-lg md:grid md:grid-cols-2">
+    <section className="flex flex-col bg-blue-550 text-white font-sena font-medium text-lg md:grid md:grid-cols-2">
       <article className="w-full h-auto">
         <img src={Tecnicos} alt="Técnicos" />
       </article>
       <div className="p-4 flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold">Técnicos</h1>
-        <h2 className="font-semibold">
+        <h1 className="text-4xl">Técnicos</h1>
+        <h2 className="">
           Duración:
           <p>
             1 año (Seis meses de etapa lectiva y seis meses de etapa práctica.
           </p>
         </h2>
-        <h2 className="font-semibold">
+        <h2 className="">
           Inscripciones:
           <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>
@@ -38,14 +38,14 @@ const Type = () => {
         <img src={Tecnologos} alt="Tecnólogos" />
       </article>
       <div className="p-4 flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold">Técnicos</h1>
-        <h2 className="font-semibold">
+        <h1 className="text-4xl">Técnicos</h1>
+        <h2 className="">
           Duración:
           <p>
             1 año (Seis meses de etapa lectiva y seis meses de etapa práctica.
           </p>
         </h2>
-        <h2 className="font-semibold">
+        <h2 className="">
           Inscripciones:
           <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>
@@ -63,14 +63,14 @@ const Type = () => {
         <img src={Especializaciones} alt="Especializaciones" />
       </article>
       <div className="p-4 flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold">Técnicos</h1>
-        <h2 className="font-semibold">
+        <h1 className="text-4xl">Técnicos</h1>
+        <h2 className="">
           Duración:
           <p>
             1 año (Seis meses de etapa lectiva y seis meses de etapa práctica.
           </p>
         </h2>
-        <h2 className="font-semibold">
+        <h2 className="">
           Inscripciones:
           <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>
@@ -88,14 +88,14 @@ const Type = () => {
         <img src={Complementaria} alt="Complementaria" />
       </article>
       <div className="p-4 flex flex-col gap-2">
-        <h1 className="text-2xl font-semibold">Técnicos</h1>
-        <h2 className="font-semibold">
+        <h1 className="text-4xl">Técnicos</h1>
+        <h2 className="">
           Duración:
           <p>
             1 año (Seis meses de etapa lectiva y seis meses de etapa práctica.
           </p>
         </h2>
-        <h2 className="font-semibold">
+        <h2 className="">
           Inscripciones:
           <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>

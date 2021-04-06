@@ -6,18 +6,21 @@ import Formacion from "./components/Formacion/Formacion.js";
 import Orientation from "./components/Orientation/Orientation.js";
 import Turns from "./components/Turns/Turns.js";
 import Footer from "./components/Footer/Footer.js";
+import { FirebaseDatabaseProvider } from "@react-firebase/database";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Main />
-      <Disabilities />
-      <Vacancies />
-      <Formacion />
-      <Orientation />
-      <Turns />
-      <Footer />
+      <FirebaseDatabaseProvider>
+        <Navbar />
+        <Main />
+        <Disabilities />
+        <Vacancies />
+        <Formacion />
+        <Orientation />
+        <Turns />
+        <Footer />
+      </FirebaseDatabaseProvider>
     </div>
   );
 }

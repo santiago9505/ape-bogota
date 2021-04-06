@@ -7,8 +7,8 @@ const Disabilities = () => {
     <div id="empleo">
       <Title
         title="INTERMEDIACION LABORAL PERSONAS CON DISCAPACIDAD"
-        line="bg-principal-300 h-0.5 w-2/5 mt-1.5 mb-1"
-        titleStyle="border-principal-200"
+        line="bg-principal-300"
+        titleStyle="border-principal-200 w-11/12"
       />
       <VacanciesCarousel />
     </div>

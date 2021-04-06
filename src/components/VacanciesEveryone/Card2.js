@@ -4,9 +4,9 @@ import Vacancie1 from "../../assets/static/img-main-1.jpg";
 class Card extends React.Component {
   render() {
     return (
-      <article className="border-2 font-sena font-semibold text-lg border-black h-96 w-80 rounded-lg text-xs text-left p-2">
+      <article className="border-2 border-gray-400 font-sena font-semibold text-lg border-black h-full w-80 rounded-lg text-xs text-left p-2">
         <div className="relative">
-          <img className="h-40 w-full sm:h-32" src={Vacancie1} alt="hola" />
+          <img className="h-48 w-full sm:h-32" src={Vacancie1} alt="hola" />
           <p className="absolute bg-white top-2 right-3 rounded-xl h-4">
             {this.props.fechaPublicacion}
           </p>

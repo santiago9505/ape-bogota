@@ -7,8 +7,8 @@ const VacanciesE = () => {
     <div className="">
       <Title
         title="INTERMEDIACIÓN LABORAL PARA TODA LA POBLACIÓN"
-        line="bg-principal-200 h-0.5 w-2/5 mt-1.5 mb-1"
-        titleStyle="border-principal-100"
+        line="bg-principal-200"
+        titleStyle="border-principal-100 w-10/12"
       />
       <Carousel />
     </div>

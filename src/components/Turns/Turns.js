@@ -7,7 +7,7 @@ const Turns = () => {
     <div id="contactanos">
       <Title
         title="TURNOS VIRTUALES"
-        line="bg-principal-300 h-0.5 w-2/5 mt-1.5 mb-1"
+        line="bg-principal-300"
         titleStyle="border-principal-100"
       />
       <BoxTurn />
