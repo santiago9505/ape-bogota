@@ -8,7 +8,7 @@ import Complementaria from "../../assets/static/img-complementaria.jpg";
 
 const Type = () => {
   return (
-    <section className="flex flex-col bg-blue-550 text-white font-sena font-medium text-lg md:grid md:grid-cols-2">
+    <section className="flex flex-col bg-blue-550 leading-snug text-white font-sena font-normal text-lg md:grid md:grid-cols-2">
       <article className="w-full h-auto">
         <img src={Tecnicos} alt="Técnicos" />
       </article>
