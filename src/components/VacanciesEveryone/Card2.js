@@ -1,43 +1,39 @@
 import React from "react";
-import Vacancie1 from "../../assets/static/img-main-1.jpg";
 
-class Card extends React.Component {
+class Card2 extends React.Component {
   render() {
     return (
-      <article className="border-2 border-gray-400 font-sena font-semibold text-lg border-black h-full w-80 rounded-lg text-xs text-left p-2">
-        <div className="relative">
-          <img className="h-48 w-full sm:h-32" src={Vacancie1} alt="hola" />
-          <p className="absolute bg-white top-2 right-3 rounded-xl h-4">
-            {this.props.fechaPublicacion}
+      <article className="border-2 font-sena font-semibold text-lg border-black h-80 w-96 rounded-lg text-center">
+        <div className="flex flex-col h-full content-center justify-between">
+          <p className="bg-gray-100 font-sans text-sm font-bold rounded-t-md p-2 self-center w-full">
+            SOLICITUD: {this.props.solicitudE}
           </p>
-        </div>
+          <div className="h-full py-6">
+            <h4 className="font-bold mb-0">{this.props.cargoE}</h4>
+            <div className="flex justify-center gap-2 mt-0 mb-6 text-standard font-bold">
+              <p className="bg-principal-200 h-6 rounded-2xl w-auto px-2">
+                {this.props.educacion1E}
+              </p>
+              <p className="bg-blue-450 h-6 text-white rounded-2xl w-auto px-2">
+                {this.props.educacion2E}
+              </p>
+              <p className="bg-principal-200 h-6 rounded-2xl w-auto px-2">
+                {this.props.educacion3E}
+              </p>
+            </div>
+            <p className="p-1 leading-5 mt-2">{this.props.descripcionE}</p>
+            <button className="bg-blue-450 rounded-xl w-28 text-white h-6 self-center underline mt-4 h-5">
+              Postularme
+            </button>
+          </div>
 
-        <h4 className="mt-4 font-bold leading-3 leading-3">
-          {this.props.cargo}
-        </h4>
-
-        <div className="flex justify-start text-base mt-1 p-0.5 pl-0 gap-2">
-          <p className="bg-principal-200 h-6 rounded-md w-28">
-            {this.props.educacion1}
+          <p className="bg-gray-100 font-sans text-sm font-bold w-full rounded-b-md mb-0">
+            {this.props.fechaPublicacionE}
           </p>
-          <p className="bg-blue-450 h-6 text-white rounded-md w-28">
-            {this.props.educacion2}
-          </p>
-          <p className="bg-principal-200 h-6 rounded-md w-28">
-            {this.props.educacion3}
-          </p>
-        </div>
-
-        <p className="p-1 leading-5 mt-1 pl-0">{this.props.descripcion}</p>
-
-        <div className="flex justify-between items-end mt-2 px-1 content-end">
-          <p className="place-self-end">SOLICITUD: {this.props.solicitud}</p>
-          <button className="bg-blue-450 rounded-xl w-28 text-white h-6 self-center underline mt-1 h-5">
-            Postularme
-          </button>
         </div>
       </article>
     );
   }
 }
-export default Card;
+
+export default Card2;

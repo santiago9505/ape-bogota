@@ -1,16 +1,16 @@
 import React from "react";
-import Title from "../Titles/Title";
-import Carousel from "../VacanciesEveryone/VacanciesCarousel.js";
+import Title from "../Titles/Title.js";
+import VacanciesCarousel2 from "./VacanciesCarousel2.js";
 
 const VacanciesE = () => {
   return (
-    <div className="">
+    <div id="empleo">
       <Title
-        title="INTERMEDIACIÓN LABORAL PARA TODA LA POBLACIÓN"
+        title="INTERMEDIACION LABORAL PARA TODA LA POBLACIÓN"
         line="bg-principal-200"
-        titleStyle="border-principal-100 w-10/12"
+        titleStyle="border-principal-100 w-11/12"
       />
-      <Carousel />
+      <VacanciesCarousel2 />
     </div>
   );
 };
