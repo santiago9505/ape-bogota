@@ -3,33 +3,31 @@ import React from "react";
 class Card2 extends React.Component {
   render() {
     return (
-      <article className="border-2 font-sena font-semibold text-lg border-black h-80 w-96 rounded-lg text-center">
-        <div className="flex flex-col h-full content-center justify-between">
-          <p className="bg-gray-100 font-sans text-sm font-bold rounded-t-md p-2 self-center w-full">
-            SOLICITUD: {this.props.solicitudE}
-          </p>
-          <div className="h-full py-6">
-            <h4 className="font-bold mb-0">{this.props.cargoE}</h4>
-            <div className="flex justify-center gap-2 mt-0 mb-6 text-standard font-bold">
-              <p className="bg-principal-200 h-6 rounded-2xl w-auto px-2">
+      <article className="border-2 font-sena text-lg border-gray-100 h-auto w-80 rounded-md text-center">
+        <div className="flex flex-col h-full content-center justify-between text-left">
+          <div className="h-52">
+            <img src={this.props.image} className="rounded-sm" alt="" />
+          </div>
+          <div className="h-full py-3 pl-3">
+            <div className="flex gap-1 mt-0 text-standard font-bold">
+              <p className="bg-principal-200 h-3 rounded-md h-5 w-auto w-auto px-2">
                 {this.props.educacion1E}
               </p>
-              <p className="bg-blue-450 h-6 text-white rounded-2xl w-auto px-2">
+              <p className="bg-blue-450 h-3 rounded-md h-5 w-auto text-white w-auto px-2">
                 {this.props.educacion2E}
               </p>
-              <p className="bg-principal-200 h-6 rounded-2xl w-auto px-2">
+              <p className="bg-principal-200 h-3 rounded-md h-5 w-auto w-auto px-2">
                 {this.props.educacion3E}
               </p>
             </div>
+            <h4 className="font-semibold mb-0 pl-1 pt-1">
+              {this.props.cargoE}
+            </h4>
             <p className="p-1 leading-5 mt-2">{this.props.descripcionE}</p>
-            <button className="bg-blue-450 rounded-xl w-28 text-white h-6 self-center underline mt-4 h-5">
+            <button className="bg-blue-450 rounded-sm ml-1 w-24 font-sans text-base text-white h-8 self-center mt-3">
               Postularme
             </button>
           </div>
-
-          <p className="bg-gray-100 font-sans text-sm font-bold w-full rounded-b-md mb-0">
-            {this.props.fechaPublicacionE}
-          </p>
         </div>
       </article>
     );

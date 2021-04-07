@@ -10,7 +10,7 @@ const VacanciesCarousel2 = () => {
           return (
             <div key={index}>
               <Card2
-                solicitudE={item.solicitudE}
+                image={item.image}
                 cargoE={item.cargoE}
                 educacion1E={item.educacion1E}
                 educacion2E={item.educacion2E}

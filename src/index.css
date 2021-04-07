@@ -4,6 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.scroll::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  margin-top: 4px;
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #ff671f;
+}
+
+::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 8px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }

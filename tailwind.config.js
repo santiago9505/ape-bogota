@@ -3,6 +3,12 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        72: "18rem",
+        84: "21rem",
+        88: "22rem",
+        96: "24rem",
+      },
       fontSize: {
         xxxs: ".5rem",
         xxs: ".6rem",
@@ -25,10 +31,10 @@ module.exports = {
           300: "#FF671F",
         },
         gray: {
-          100: "#EDEDED",
+          100: "rgba(0,0,0,.05)",
         },
         blue: {
-          450: "#005DDA",
+          450: "#007bff",
           475: "#5497B5",
           550: "#0D1325",
         },

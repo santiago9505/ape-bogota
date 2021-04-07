@@ -12,7 +12,7 @@ const Type = () => {
       <article className="w-full h-auto">
         <img src={Tecnicos} alt="Técnicos" />
       </article>
-      <div className="p-4 flex flex-col gap-2">
+      <div className="p-4 flex flex-col gap-2 tracking-tight">
         <h1 className="text-4xl">Técnicos</h1>
         <h2 className="">
           Duración:
