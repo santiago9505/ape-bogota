@@ -5,7 +5,7 @@ import VacanciesItems from "./VacanciesItems.js";
 const VacanciesCarousel = () => {
   return (
     <section className="">
-      <div className="grid grid-flow-col overflow-x-auto scroll gap-4 ml-4 h-auto">
+      <div className="grid grid-flow-col overflow-x-auto scroll pl-2 pb-4 gap-4 ml-4 h-auto">
         {VacanciesItems.map((item, index) => {
           return (
             <div key={index}>

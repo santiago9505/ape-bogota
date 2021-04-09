@@ -3,7 +3,7 @@ import React from "react";
 class Card extends React.Component {
   render() {
     return (
-      <article className="border-2 font-sena text-lg border-gray-100 h-84 w-84 rounded-md text-center">
+      <article className="card mt-1 border-2 cursor-pointer font-sena text-lg border-gray-100 h-84 w-84 rounded-md text-center">
         <div className="flex flex-col h-full content-center justify-between">
           <p className="bg-gray-100 font-sans text-base font-normal rounded-t-sm p-2 self-center w-full">
             Solicitud: {this.props.solicitud}
@@ -24,7 +24,7 @@ class Card extends React.Component {
             <p className="px-2 leading-5 font-normal text-justify overflow-clip">
               {this.props.descripcion}
             </p>
-            <button className="bg-blue-450 rounded-sm w-24 font-sans text-base text-white h-8 self-center mt-3 h-5">
+            <button className="bg-blue-450 hover:bg-principal-100 rounded-sm w-24 font-sans text-base text-white h-8 self-center mt-3 h-5">
               Postularme
             </button>
           </div>

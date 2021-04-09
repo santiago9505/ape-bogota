@@ -8,7 +8,7 @@ import Email from "../../assets/static/email.svg";
 const Footer = () => {
   return (
     <div>
-      <article className="bg-gray-100 w-full flex flex-col h-full text-lg font-sena items-center text-center justify-center py-6">
+      <article className="border-b-4 border-principal-200 bg-gray-100 w-full flex flex-col h-full text-lg font-sena items-center text-center justify-center py-6">
         <h2 className="font-extrabold">
           ¿TIENES ALGUNA DUDA O SOLICITUD?
           <br />
@@ -18,7 +18,7 @@ const Footer = () => {
           Diligencia tus datos
         </button>
       </article>
-      <footer className="w-full flex flex-col items-center gap-4 text-center font-semibold text-white text-lg font-sena bg-principal-300 py-4">
+      <footer className="w-full border-t-4 border-principal-200 flex flex-col items-center gap-4 text-center font-semibold text-white text-lg font-sena bg-principal-300 py-4">
         <article className="w-64">
           <h2>©Agencia Pública de Empleo - SENA, Regional Distrito Capital</h2>
         </article>

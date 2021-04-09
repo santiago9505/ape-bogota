@@ -1,16 +1,8 @@
 import React from "react";
-
-//assets
-import Image1 from "../../assets/static/img-main-1.jpg";
+import Carousel from "./Carousel.js";
 
 const Main = () => {
-  return (
-    <div className="">
-      <div className="inset-0 w-full bg-pink-500 text-white flex items-center justify-center text-5xl">
-        <img src={Image1} alt="" />
-      </div>
-    </div>
-  );
+  return <Carousel />;
 };
 
 export default Main;

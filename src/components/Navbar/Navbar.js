@@ -22,7 +22,7 @@ const Navbar = () => {
     setTheme(!theme);
   };
   return (
-    <nav className="sticky top-0 bg-principal-100 border-b-4 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-red-500 md:bg-green-600 lg:bg-pink-500 xl:bg-yellow-500 2xl:bg-purpple-500 3xl:bg-gray-500">
+    <nav className="absolute sticky top-0 bg-principal-100 border-b-4 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-red-500 md:bg-green-600 lg:bg-pink-500 xl:bg-yellow-500 2xl:bg-purpple-500 3xl:bg-gray-500">
       <article className="flex w-52">
         <img className="w-full" src={Logo} alt="logo" />
       </article>
@@ -38,7 +38,7 @@ const Navbar = () => {
       </a>
       <ul className={theme ? navbarStyle : "hidden " + navbarStyle}>
         <li className="flex gap-4 items-center">
-          <a href="#empleo">
+          <a onMouseEnter="" href="#empleo">
             <img className="w-8 h-8 pb-1" src={EmployIcon} alt="" />
           </a>
           <a href="#empleo">Empleo</a>

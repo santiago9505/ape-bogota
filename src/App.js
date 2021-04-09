@@ -6,10 +6,11 @@ import Formacion from "./components/Formacion/Formacion.js";
 import Orientation from "./components/Orientation/Orientation.js";
 import Turns from "./components/Turns/Turns.js";
 import Footer from "./components/Footer/Footer.js";
+import firebase from "./firebase.js";
 
 function App() {
   return (
-    <div>
+    <div className="relative">
       <Navbar />
       <Main />
       <Disabilities />

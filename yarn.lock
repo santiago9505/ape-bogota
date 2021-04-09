@@ -5591,7 +5591,7 @@
     "locate-path" "^5.0.0"
     "path-exists" "^4.0.0"
 
-"firebase@>=4":
+"firebase@^8.3.2", "firebase@>=4":
   "integrity" "sha512-qGKASp6lXcV8NriHz/3wdltyLUjHOVkON6TQ1syGjW0sS5q/yTl9LK4O83hDLwG+UeRVRhLOaVa3jaLG4o3gnw=="
   "resolved" "https://registry.npmjs.org/firebase/-/firebase-8.3.2.tgz"
   "version" "8.3.2"

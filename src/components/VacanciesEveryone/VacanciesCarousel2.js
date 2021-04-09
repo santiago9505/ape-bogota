@@ -5,10 +5,10 @@ import Vacancies2Items from "./Vacancies2Items.js";
 const VacanciesCarousel2 = () => {
   return (
     <section className="">
-      <div className="grid grid-flow-col overflow-x-auto scroll gap-4 ml-4 h-auto">
+      <div className="grid grid-flow-col overflow-x-auto scroll pb-4 ml-4 h-auto">
         {Vacancies2Items.map((item, index) => {
           return (
-            <div key={index}>
+            <div className="pr-3" key={index}>
               <Card2
                 image={item.image}
                 cargoE={item.cargoE}

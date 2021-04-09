@@ -3,6 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      scale: ["active", "hover"],
       spacing: {
         72: "18rem",
         84: "21rem",
@@ -34,7 +35,7 @@ module.exports = {
           100: "rgba(0,0,0,.05)",
         },
         blue: {
-          450: "#007bff",
+          450: "#005DDA",
           475: "#5497B5",
           550: "#0D1325",
         },

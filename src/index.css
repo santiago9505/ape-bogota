@@ -4,24 +4,43 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-scrollbar {
+.scroll::-webkit-scrollbar {
   -webkit-appearance: none;
-  margin-top: 4px;
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
 }
-::-webkit-scrollbar-thumb {
-  border-radius: 8px;
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 4px;
   background-color: #ff671f;
 }
 
-::-webkit-scrollbar-track {
+.scroll::-webkit-scrollbar-track {
   background: #e1e1e1;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 /* Cambiamos el fondo cuando esté en active o hover */
-::-webkit-scrollbar-track:hover,
-::-webkit-scrollbar-track:active {
+.scroll::-webkit-scrollbar-track:hover,
+.scroll::-webkit-scrollbar-track:active {
   background: #d4d4d4;
+}
+
+.card:hover {
+  position: inherit;
+  height: 340px;
+  width: 338px;
+  box-shadow: 0px 0px 5px 1px black;
+  -webkit-transform: scale(1.009);
+  transform: scale(1.009);
+  transition-duration: 500ms;
+}
+
+.card2:hover {
+  position: inherit;
+  height: 440px;
+  width: 320px;
+  box-shadow: 0px 0px 5px 1px black;
+  -webkit-transform: scale(1.009);
+  transform: scale(1.009);
+  transition-duration: 500ms;
 }

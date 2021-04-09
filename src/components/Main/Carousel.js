@@ -3,8 +3,10 @@ import React from "react";
 
 const Carousel = () => {
   return (
-    <div>
-      <Carousel></Carousel>
+    <div className="">
+      <div className="inset-0 w-full bg-pink-500 text-white flex items-center justify-center text-5xl">
+        <img src={Image1} alt="" />
+      </div>
     </div>
   );
 };
