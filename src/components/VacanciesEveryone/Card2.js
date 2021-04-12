@@ -3,9 +3,9 @@ import React from "react";
 class Card2 extends React.Component {
   render() {
     return (
-      <article className="card2 border-2 cursor-pointer font-sena text-lg border-gray-100 h-auto w-80 rounded-md text-center">
+      <article className="card2 border-2 cursor-pointer font-sena text-lg border-gray-100 h-auto w-80 rounded-md text-center sm:w-88">
         <div className="flex flex-col h-full content-center justify-between text-left">
-          <div className="h-52">
+          <div className="h-52 sm:h-60">
             <img src={this.props.image} className="rounded-sm" alt="" />
           </div>
           <div className="h-full py-3 pl-3">

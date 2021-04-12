@@ -8,7 +8,9 @@ module.exports = {
         72: "18rem",
         84: "21rem",
         88: "22rem",
+        90: "23rem",
         96: "24rem",
+        110: "31rem",
       },
       fontSize: {
         xxxs: ".5rem",

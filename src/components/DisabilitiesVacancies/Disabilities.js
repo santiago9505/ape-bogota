@@ -4,7 +4,7 @@ import VacanciesCarousel from "./VacanciesCarousel.js";
 
 const Disabilities = () => {
   return (
-    <div id="empleo">
+    <div id="empleo" className="">
       <Title
         title="INTERMEDIACION LABORAL PERSONAS CON DISCAPACIDAD"
         line="bg-principal-300"
