@@ -35,6 +35,7 @@ module.exports = {
         },
         gray: {
           100: "rgba(0,0,0,.05)",
+          222: "#EDEDED",
         },
         blue: {
           450: "#005DDA",
@@ -44,6 +45,9 @@ module.exports = {
         green: {
           450: "#5BBD1F",
         },
+      },
+      borderWidth: {
+        1: "1px",
       },
       fontFamily: {
         sena: ["Josefin Sans"],

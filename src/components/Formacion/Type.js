@@ -8,11 +8,11 @@ import Complementaria from "../../assets/static/img-complementaria.jpg";
 
 const Type = () => {
   return (
-    <section className="flex flex-col bg-blue-550 leading-snug text-white font-sena font-normal text-lg md:grid md:grid-cols-2">
+    <section className="flex flex-col bg-blue-550 leading-snug text-white font-sena font-normal text-lg lg:grid lg:grid-cols-2">
       <article className="w-full h-auto">
         <img src={Tecnicos} alt="Técnicos" />
       </article>
-      <div className="p-4 flex flex-col gap-2 tracking-tight">
+      <div className="px-4 flex flex-col gap-2 tracking-tight py-8">
         <h1 className="text-4xl">Técnicos</h1>
         <h2 className="">
           Duración:
@@ -37,7 +37,7 @@ const Type = () => {
       <article className="w-full h-auto">
         <img src={Tecnologos} alt="Tecnólogos" />
       </article>
-      <div className="p-4 flex flex-col gap-2">
+      <div className="px-4 flex flex-col gap-2 py-8">
         <h1 className="text-4xl">Tecnólogos</h1>
         <h2 className="">
           Duración:
@@ -63,7 +63,7 @@ const Type = () => {
       <article className="w-full h-auto">
         <img src={Especializaciones} alt="Especializaciones" />
       </article>
-      <div className="p-4 flex flex-col gap-2">
+      <div className="px-4 flex flex-col gap-2 py-8">
         <h1 className="text-4xl">Especializaciones Tecnológicas</h1>
         <h2 className="">
           Duración:
@@ -84,7 +84,7 @@ const Type = () => {
       <article className="w-full h-auto">
         <img src={Complementaria} alt="Complementaria" />
       </article>
-      <div className="p-4 flex flex-col gap-2">
+      <div className="px-4 flex flex-col gap-2 py-8">
         <h1 className="text-4xl">Formación Complementaria</h1>
         <h2 className="">
           Duración:

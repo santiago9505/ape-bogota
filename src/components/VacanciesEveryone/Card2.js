@@ -24,7 +24,7 @@ class Card2 extends React.Component {
               {this.props.cargoE}
             </h4>
             <p className="p-1 leading-5 mt-2">{this.props.descripcionE}</p>
-            <button className="bg-blue-450 rounded-sm ml-1 w-24 font-sans text-base text-white h-8 self-center mt-3">
+            <button className="bg-blue-450 hover:bg-principal-100 rounded-sm ml-1 w-24 font-sans text-base text-white h-8 self-center mt-3">
               Postularme
             </button>
           </div>

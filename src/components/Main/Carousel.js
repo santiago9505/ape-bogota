@@ -5,7 +5,7 @@ import Image2 from "../../assets/static/img-main-2.jpg";
 import Image3 from "../../assets/static/img-main-3.jpeg";
 const Carousel = () => {
   return (
-    <article className=" grid grid-flow-col bg-yellow-500 sm:h-96 lg:h-110 overflow-x-auto overflow-y-hidden carousel">
+    <article className=" grid grid-flow-col sm:h-96 lg:h-110 overflow-x-auto overflow-y-hidden">
       <ul className="flex">
         <li className="w-screen" id="img1" htmlFor="">
           <img

@@ -4,11 +4,11 @@ import VacanciesItems from "./VacanciesItems.js";
 
 const VacanciesCarousel = () => {
   return (
-    <section className="">
-      <div className="grid grid-flow-col overflow-x-auto scroll pl-2 pb-4 gap-4 ml-4 h-auto sm:gap-5 sm:pb-8">
+    <section className="carousel">
+      <div className="flex gap-5 ml-3 font-sans overflow-x-auto overflow-y-hide items-center carousel__container">
         {VacanciesItems.map((item, index) => {
           return (
-            <div key={index}>
+            <div className="py-16 px-4 carousel" key={index}>
               <Card
                 solicitud={item.solicitud}
                 cargo={item.cargo}

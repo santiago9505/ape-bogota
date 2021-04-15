@@ -16,7 +16,7 @@ import ProfileIcon from "../../assets/static/profile-icon.png";
 
 const Navbar = () => {
   const navbarStyle =
-    "absolute flex flex-col w-8/12 max-w-sm gap-4 text-start border-2 text-xl py-4 px-4 right-0.5 top-24 rounded-md bg-principal-100 leading-10 sm:gap-5 sm:top-28";
+    "absolute flex flex-col w-8/12 max-w-sm gap-4 text-start border-2 text-xl py-4 px-4 right-0.5 top-24 rounded-md bg-principal-100 leading-10 sm:gap-5 sm:top-28 md:text-2xl md:gap-7";
   const [theme, setTheme] = useState(false);
   const [image, setImage] = useState(false);
   const [ghyph2, setGhyph2] = useState(false);
@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute sticky top-0 bg-principal-100 border-b-8 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-principal-200 md:bg-green-600 lg:bg-pink-500 xl:bg-principal-100 2xl:bg-purpple-500 3xl:bg-gray-500">
+    <nav className="absolute sticky top-0 bg-principal-100 border-b-8 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-principal-100 md:bg-green-600 md:static lg:bg-pink-500 xl:bg-principal-100 2xl:bg-purpple-500 3xl:bg-gray-500">
       <article className="flex w-52">
         <img className="w-full" src={Logo} alt="logo" />
       </article>
@@ -74,7 +74,7 @@ const Navbar = () => {
             <img
               className={
                 image
-                  ? "absolute top-14 right-40 w-60 block sm:w-80 sm:right-90"
+                  ? "absolute rounded-xl border-4 border-principal-300 top-14 right-40 w-60 block sm:w-80 sm:right-90 md:w-88 md:right-96"
                   : "hidden"
               }
               src="https://media.giphy.com/media/PbmAiZCa2sCzaLZttd/giphy.gif"
@@ -93,7 +93,7 @@ const Navbar = () => {
             <img
               className={
                 ghyph2
-                  ? "absolute top-28 right-40 w-60 block sm:w-80 sm:right-90"
+                  ? "absolute rounded-xl border-4 border-principal-300 top-28 right-40 w-60 block sm:w-80 sm:right-90 md:w-88 md:right-96"
                   : "hidden"
               }
               src="https://media.giphy.com/media/T6QoFn5bn0SS9RAjjT/giphy.gif"
@@ -113,7 +113,7 @@ const Navbar = () => {
             <img
               className={
                 ghyph3
-                  ? "absolute top-40 right-40 w-60 block sm:w-80 sm:right-90"
+                  ? "absolute rounded-xl border-4 border-principal-300 top-40 right-40 w-60 block sm:w-80 sm:right-90 md:w-88 md:right-96"
                   : "hidden"
               }
               src="https://media.giphy.com/media/3sroI8NT5rAL1oorYX/giphy.gif"
@@ -132,7 +132,7 @@ const Navbar = () => {
             <img
               className={
                 ghyph4
-                  ? "absolute top-56 right-40 w-60 block sm:w-80 sm:right-90"
+                  ? "absolute rounded-xl border-4 border-principal-300 top-56 right-40 w-60 block sm:w-80 sm:right-90 md:w-88 md:right-96"
                   : "hidden"
               }
               src="https://media.giphy.com/media/cCvmaO400uX2cIVz5R/giphy.gif"
@@ -153,7 +153,7 @@ const Navbar = () => {
             <img
               className={
                 ghyph5
-                  ? "absolute top-72 right-40 w-60 block sm:w-80 sm:right-90"
+                  ? "absolute rounded-xl border-4 border-principal-300 top-72 right-40 w-60 block sm:w-80 sm:right-90 md:w-88 md:right-96"
                   : "hidden"
               }
               src="https://media.giphy.com/media/bAFQns8md2BSxMLkeJ/giphy.gif"

@@ -9,7 +9,7 @@ const Formacion = () => {
       <Title
         title="FORMACIÓN"
         line="bg-principal-100"
-        titleStyle="border-principal-300 w-52"
+        titleStyle="border-principal-300 w-60 tracking-wider"
       />
       <LastOffer />
       <Type />
