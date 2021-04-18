@@ -3,13 +3,13 @@ import React from "react";
 class Card2 extends React.Component {
   render() {
     return (
-      <article className="card2 border-2 cursor-pointer font-sena text-lg border-gray-100 h-auto w-80 rounded-md text-center sm:w-88">
+      <button className="carousel__item border-2 cursor-pointer font-sena border-gray-100 h-auto w-80 rounded-md text-center">
         <div className="flex flex-col h-full content-center justify-between text-left">
-          <div className="h-52 sm:h-60">
+          <div className="h-56">
             <img src={this.props.image} className="rounded-sm" alt="" />
           </div>
-          <div className="h-full py-3 pl-3">
-            <div className="flex gap-1 mt-0 text-standard font-bold">
+          <div className="h-full pb-5 pl-3">
+            <div className="flex gap-1 mt-0 text-sm font-normal">
               <p className="bg-principal-200 h-3 rounded-md h-5 w-auto w-auto px-2">
                 {this.props.educacion1E}
               </p>
@@ -20,7 +20,7 @@ class Card2 extends React.Component {
                 {this.props.educacion3E}
               </p>
             </div>
-            <h4 className="font-semibold mb-0 pl-1 pt-1">
+            <h4 className="text-lg font-extrabold mb-0 pl-1 pt-1">
               {this.props.cargoE}
             </h4>
             <p className="p-1 leading-5 mt-2">{this.props.descripcionE}</p>
@@ -29,7 +29,7 @@ class Card2 extends React.Component {
             </button>
           </div>
         </div>
-      </article>
+      </button>
     );
   }
 }

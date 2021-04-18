@@ -1,14 +1,28 @@
 import React from "react";
 import Card2 from "./Card2.js";
 import Vacancies2Items from "./Vacancies2Items.js";
+import ArrowLeft from "../../assets/static/arrow-left.png";
 
 const VacanciesCarousel2 = () => {
+  const handleScrollRight = () => {
+    handleChange(280);
+  };
+  const handleScrollLeft = () => {
+    handleChange(-280);
+  };
+  const handleChange = (number) => {
+    document.getElementById("carousel__container2").scrollLeft += number;
+  };
   return (
-    <section className="">
-      <div className="grid grid-flow-col overflow-x-auto scroll pb-4 ml-4 h-auto sm:pb-8">
+    <section className="carousel">
+      <div
+        onChange={handleChange}
+        id="carousel__container2"
+        className="flex gap-2 ml-3 font-sans overflow-x-auto overflow-y-hide items-center carousel__container"
+      >
         {Vacancies2Items.map((item, index) => {
           return (
-            <div className="pr-3" key={index}>
+            <div className="py-2 px-4 carousel lg:py-8" key={index}>
               <Card2
                 image={item.image}
                 cargoE={item.cargoE}
@@ -21,6 +35,22 @@ const VacanciesCarousel2 = () => {
             </div>
           );
         })}
+      </div>
+      <div id="container" className="arrows relative">
+        <button
+          id="slide"
+          onClick={handleScrollRight}
+          className="bottom-48 arrow__right"
+        >
+          <img
+            className="w-6 origin-center transform rotate-180"
+            src={ArrowLeft}
+            alt="flecha_derecha"
+          />
+        </button>
+        <button id="slide" onClick={handleScrollLeft} className="arrow__left">
+          <img className="w-6" src={ArrowLeft} alt="flecha_izquierda" />
+        </button>
       </div>
     </section>
   );

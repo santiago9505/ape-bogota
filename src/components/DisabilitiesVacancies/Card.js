@@ -5,12 +5,12 @@ class Card extends React.Component {
     return (
       <button
         href=""
-        className="carousel__item flex flex-wrap rounded-2xl border-1 border-gray-900 content-between justify-center font-sena h-90 w-80"
+        className="carousel__item flex flex-wrap rounded-2xl border-1 border-gray-900 content-between justify-center font-sena h-96 w-80"
       >
         <div className="bg-gray-222 flex flex-wrap rounded-t-2xl justify-center font-medium font-sans content-center w-full h-10">
           <p>Solicitud: {this.props.solicitud}</p>
         </div>
-        <div className="flex flex-col justify-center content-center text-md font-extrabold w-full h-10 gap-1">
+        <div className="flex flex-col justify-center content-center text-lg font-extrabold w-full h-10 gap-1">
           <p>{this.props.cargo}</p>
           <div className="flex justify-center text-sm font-normal gap-1">
             <div className="bg-principal-200 rounded-2xl px-2">

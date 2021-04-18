@@ -4,21 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.card2:hover {
-  position: inherit;
-  height: 440px;
-  width: 320px;
-  box-shadow: 0px 0px 5px 1px black;
-  -webkit-transform: scale(1.009);
-  transform: scale(1.009);
-  transition-duration: 500ms;
+html {
+  scroll-behavior: smooth;
+}
+
+#carousel__container {
+  scroll-behavior: smooth;
+}
+
+#carousel__container2 {
+  scroll-behavior: smooth;
+}
+
+.arrows {
+  position: relative;
+}
+
+.arrow__right {
+  position: absolute;
+  right: 10px;
+  bottom: 180px;
+}
+.arrow__left {
+  position: absolute;
+  left: 10px;
+  bottom: 180px;
 }
 
 @media screen and (min-width: 640px) {
-  .card2:hover {
-    height: 480px;
-    width: 360px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -39,12 +52,20 @@
   }
 
   .carousel__item:hover ~ .carousel__item {
-    transform: translate3d(100px, 0, 0);
+    transform: translate3d(50px, 0, 0);
   }
 
   .carousel__container:hover .carousel__item {
-    opacity: 0.3;
+    opacity: 0.57;
   }
+
+  /* .arrows {
+    display: none;
+  }
+
+  #carousel__container:hover ~ .arrows {
+    display: block;
+  } */
 
   .carousel__container:hover .carousel__item:hover {
     transform: scale(1.1);
