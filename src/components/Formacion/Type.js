@@ -17,17 +17,17 @@ const Type = () => {
         <h2 className="">
           Duración:
           <p>
-            1 año (Seis meses de etapa lectiva y seis meses de etapa práctica.
+            Un año (Seis meses de etapa lectiva y seis meses de etapa práctica.
           </p>
         </h2>
         <h2 className="">
           Inscripciones:
-          <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
+          <p>Cada tres meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>
         <p>
           Programas técnicos, con duración de un año; seis meses de etapa
           lectiva, y seís meses de etapa práctica, convocatorias para
-          inscripciones cada 3 meses a través de Sena Sofía Plus, nivel
+          inscripciones cada tres meses a través de Sena Sofía Plus, nivel
           educativo requerido, noveno grado aprobado
         </p>
         <button className="border-2 w-36 mx-auto rounded-lg my-2">
@@ -42,18 +42,18 @@ const Type = () => {
         <h2 className="">
           Duración:
           <p>
-            2 años (Un año y seis meses de etapa lectiva y seis meses de etapa
+            Dos años (Un año y seis meses de etapa lectiva y seis meses de etapa
             práctica.)
           </p>
         </h2>
         <h2 className="">
           Inscripciones:
-          <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
+          <p>Cada tres meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>
         <p>
           Programas Tecnológicos, con duración de un año; seis meses de etapa
           lectiva, y seís meses de etapa práctica, convocatorias para
-          inscripciones cada 3 meses a través de Sena Sofía Plus, nivel
+          inscripciones cada tres meses a través de Sena Sofía Plus, nivel
           educativo requerido, bachiller académico con prueba de estado ICFES.
         </p>
         <button className="border-2 w-36 mx-auto rounded-lg my-2">
@@ -67,15 +67,15 @@ const Type = () => {
         <h1 className="text-4xl">Especializaciones Tecnológicas</h1>
         <h2 className="">
           Duración:
-          <p>2 años</p>
+          <p>Dos años</p>
         </h2>
         <h2 className="">
           Inscripciones:
-          <p>Cada 3 meses a través de http://www.senasofiaplus.edu.co/</p>
+          <p>Cada tres meses a través de http://www.senasofiaplus.edu.co/</p>
         </h2>
         <p>
           Especializaciones Tecnológicas, con duración de dos años; convocatoria
-          para inscripciones cada 3 meses a través de Sena Sofía Plus
+          para inscripciones cada tres meses a través de Sena Sofía Plus
         </p>
         <button className="border-2 w-36 mx-auto rounded-lg my-2">
           Conoce más

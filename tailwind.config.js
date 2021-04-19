@@ -10,6 +10,7 @@ module.exports = {
         88: "22rem",
         90: "23rem",
         96: "24rem",
+        105: "30rem",
         110: "31rem",
       },
       fontSize: {
@@ -61,8 +62,6 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
+  variants: {},
   plugins: [],
 };

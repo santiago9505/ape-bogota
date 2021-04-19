@@ -6,7 +6,7 @@ const Disabilities = () => {
   return (
     <div id="empleo" className="">
       <Title
-        title="INTERMEDIACION LABORAL PERSONAS CON DISCAPACIDAD"
+        title="INTERMEDIACIÓN LABORAL PERSONAS CON DISCAPACIDAD"
         line="bg-principal-300"
         titleStyle="border-principal-200 w-11/12"
       />

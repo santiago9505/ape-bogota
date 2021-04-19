@@ -5,31 +5,35 @@ import Image2 from "../../assets/static/img-main-2.jpg";
 import Image3 from "../../assets/static/img-main-3.jpeg";
 const Carousel = () => {
   return (
-    <article className=" grid grid-flow-col sm:h-96 lg:h-110 overflow-x-auto overflow-y-hidden">
-      <ul className="flex">
-        <li className="w-screen" id="img1" htmlFor="">
+    <section className="bg-red-500 flex overflow-x-scroll overflow-y-hidden lg:h-110">
+      <article>
+        <div className="">
           <img
-            className="lg:object-cover lg:h-3/5 lg:w-full"
+            className="w-screen lg:h-105 bg-green-500"
             src={Image1}
             alt="imagen1"
           />
-        </li>
-        <li className="w-screen" id="img2" htmlFor="">
+        </div>
+      </article>
+      <article>
+        <div>
           <img
-            className="lg:object-cover lg:h-3/5 lg:w-full"
+            className="w-screen lg:h-105 bg-green-500"
             src={Image2}
             alt="imagen2"
           />
-        </li>
-        <li className="w-screen" id="img3" htmlFor="">
+        </div>
+      </article>
+      <article>
+        <div>
           <img
-            className="lg:object-cover lg:h-3/5 lg:w-full"
+            className="w-screen lg:h-105 bg-green-500"
             src={Image3}
             alt="imagen3"
           />
-        </li>
-      </ul>
-    </article>
+        </div>
+      </article>
+    </section>
   );
 };
 

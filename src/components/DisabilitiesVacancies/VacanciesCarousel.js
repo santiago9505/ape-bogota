@@ -5,10 +5,10 @@ import VacanciesItems from "./VacanciesItems.js";
 
 const VacanciesCarousel = () => {
   const handleScrollRight = () => {
-    handleChange(280);
+    handleChange(370);
   };
   const handleScrollLeft = () => {
-    handleChange(-280);
+    handleChange(-370);
   };
   const handleChange = (number) => {
     document.getElementById("carousel__container").scrollLeft += number;

@@ -12,11 +12,11 @@ import OrientationIcon from "../../assets/static/orientation-icon.png";
 import EmprendimientoIcon from "../../assets/static/emprendimiento-icon.png";
 import MoreIcon from "../../assets/static/more-icon.png";
 import ContactIcon from "../../assets/static/contact-icon.png";
-import ProfileIcon from "../../assets/static/profile-icon.png";
+import ProfileIcon from "../../assets/static/profile-icon.svg";
 
 const Navbar = () => {
   const navbarStyle =
-    "absolute flex flex-col w-8/12 max-w-sm gap-4 text-start border-2 text-xl py-4 px-4 right-0.5 top-24 rounded-md bg-principal-100 leading-10 sm:gap-5 sm:top-28 md:text-2xl md:gap-7";
+    "absolute flex flex-col w-8/12 max-w-sm gap-4 text-start border-2 text-xl py-4 px-4 right-0.5 top-24 rounded-md bg-principal-100 leading-10 sm:gap-5 sm:top-24 md:text-2xl md:gap-7 lg:static lg:flex lg:justify-end lg:flex-row lg:max-w-none lg:w-full lg:text-xl lg:gap-6 lg:border-none lg:py-0 lg:items-end xl:gap-8 2xl:text-2xl 2xl:gap-10 3xl:gap-14 3xl:text-3xl";
   const [theme, setTheme] = useState(false);
   const [image, setImage] = useState(false);
   const [ghyph2, setGhyph2] = useState(false);
@@ -50,22 +50,29 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute sticky top-0 bg-principal-100 border-b-8 border-principal-300 font-sena px-10 py-6 text-white flex justify-between items-center sm:bg-principal-100 md:bg-green-600 md:static lg:bg-pink-500 xl:bg-principal-100 2xl:bg-purpple-500 3xl:bg-gray-500">
-      <article className="flex w-52">
-        <img className="w-full" src={Logo} alt="logo" />
-      </article>
-      <audio
-        className="h-4 hidden flex w-20 sm:h-6 md:w-60"
-        alt="audio_presiona_espacio"
-        controls
+    <nav className="absolute sticky top-0 bg-principal-100 border-b-8 border-principal-300 font-sena px-10 py-4 text-white flex justify-between items-center md:static lg:items-end 3xl:py-8">
+      <div className="w-full items-center flex sm:gap-8 lg:w-96 lg:flex-col lg:items-center lg:gap-2">
+        <article className="flex w-52 3xl:w-80">
+          <img className="w-full" src={Logo} alt="logo" />
+        </article>
+        <audio
+          className="h-4 flex w-20 hidden sm:flex sm:w-3/6 md:w-3/6 md:max-w-md lg:w-full 3xl:h-7"
+          alt="audio_presiona_espacio"
+          controls
+        >
+          <source src={AudioStart} type="audio/mp3" />
+        </audio>
+      </div>
+
+      <Link
+        to=""
+        className="flex items-center w-8 lg:hidden"
+        onClick={handleClick}
       >
-        <source src={AudioStart} type="audio/mp3" />
-      </audio>
-      <Link to="" className="flex items-center w-8" onClick={handleClick}>
         <img src={theme ? MenuIcon2 : MenuIcon} className="w-full" alt="" />
       </Link>
       <ul className={theme ? navbarStyle : "hidden " + navbarStyle}>
-        <li className="flex gap-4 items-center">
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col">
           <a
             onMouseEnter={handleHover1}
             onMouseLeave={handleHover1}
@@ -80,11 +87,17 @@ const Navbar = () => {
               src="https://media.giphy.com/media/PbmAiZCa2sCzaLZttd/giphy.gif"
               alt=""
             />
-            <img className="w-8 h-8 pb-1" src={EmployIcon} alt="" />
+            <img
+              className="w-8 h-8 pb-1 lg:hidden"
+              src={EmployIcon}
+              alt="empleo"
+            />
           </a>
-          <a href="#empleo">Empleo</a>
+          <a className="hover:text-principal-300" href="#empleo">
+            Empleo
+          </a>
         </li>
-        <li className="flex gap-4 items-center">
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col">
           <a
             onMouseEnter={handleHover2}
             onMouseLeave={handleHover2}
@@ -99,12 +112,18 @@ const Navbar = () => {
               src="https://media.giphy.com/media/T6QoFn5bn0SS9RAjjT/giphy.gif"
               alt=""
             />
-            <img className="w-8 h-8 pb-1" src={EducationIcon} alt="" />
+            <img
+              className="w-8 h-8 pb-1 lg:hidden"
+              src={EducationIcon}
+              alt=""
+            />
           </a>
 
-          <a href="#formacion">Formación</a>
+          <a className="hover:text-principal-300" href="#formacion">
+            Formación
+          </a>
         </li>
-        <li className="flex gap-4 items-center">
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col">
           <a
             onMouseEnter={handleHover3}
             onMouseLeave={handleHover3}
@@ -119,11 +138,17 @@ const Navbar = () => {
               src="https://media.giphy.com/media/3sroI8NT5rAL1oorYX/giphy.gif"
               alt=""
             />
-            <img className="w-8 h-8 pb-1" src={OrientationIcon} alt="" />
+            <img
+              className="w-8 h-8 pb-1 lg:hidden"
+              src={OrientationIcon}
+              alt=""
+            />
           </a>
-          <a href="#orientacion">Orientación</a>
+          <a className="hover:text-principal-300" href="#orientacion">
+            Orientación
+          </a>
         </li>
-        <li className="flex gap-4 items-center">
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col">
           <a
             onMouseEnter={handleHover4}
             onMouseLeave={handleHover4}
@@ -138,13 +163,20 @@ const Navbar = () => {
               src="https://media.giphy.com/media/cCvmaO400uX2cIVz5R/giphy.gif"
               alt=""
             />
-            <img className="w-8 h-8 pb-1" src={EmprendimientoIcon} alt="" />
+            <img
+              className="w-8 h-8 pb-1 lg:hidden"
+              src={EmprendimientoIcon}
+              alt=""
+            />
           </a>
-          <a href="http://www.fondoemprender.com/SitePages/Home.aspx">
+          <a
+            className="hover:text-principal-300"
+            href="http://www.fondoemprender.com/SitePages/Home.aspx"
+          >
             Emprendimiento
           </a>
         </li>
-        <li className="flex gap-4 items-center">
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col">
           <a
             onMouseEnter={handleHover5}
             onMouseLeave={handleHover5}
@@ -159,23 +191,37 @@ const Navbar = () => {
               src="https://media.giphy.com/media/bAFQns8md2BSxMLkeJ/giphy.gif"
               alt=""
             />
-            <img className="w-8 h-8 pb-1" src={ContactIcon} alt="" />
+            <img
+              className="w-8 h-8 pb-1 lg:hidden"
+              src={ContactIcon}
+              alt="contáctanos"
+            />
           </a>
 
-          <a href="#contactanos">Contáctanos</a>
+          <a className="hover:text-principal-300" href="#contactanos">
+            Contáctanos
+          </a>
         </li>
-        <li className="flex gap-4 items-center">
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col lg:hidden">
           <Link to="#otros">
-            <img className="w-8 h-3 pb-1" src={MoreIcon} alt="" />
+            <img className="w-8 h-3 pb-1 lg:hidden" src={MoreIcon} alt="más" />
           </Link>
 
-          <Link to="#otros">Otros Servicios</Link>
-        </li>
-        <li className="flex gap-4 items-center">
-          <Link to="/login">
-            <img className="w-8 h-8" src={ProfileIcon} alt="" />
+          <Link className="hover:text-principal-300" to="#otros">
+            Otros Servicios
           </Link>
-          <Link to="/login">Funcionarios</Link>
+        </li>
+        <li className="flex gap-4 items-center lg:gap-0 lg:flex-col">
+          <Link to="/login">
+            <img
+              className="w-8 hover:opacity-50 h-8 xl:w-10 xl:h-10 2xl:w-10 2xl:h-10 3xl:w-14 3xl:h-14"
+              src={ProfileIcon}
+              alt="funcionarios"
+            />
+          </Link>
+          <Link className="lg:hidden hover:text-principal-300" to="/login">
+            Funcionarios
+          </Link>
         </li>
       </ul>
     </nav>
