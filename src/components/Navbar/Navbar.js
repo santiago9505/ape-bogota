@@ -50,7 +50,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute sticky top-0 bg-principal-100 border-b-8 border-principal-300 font-sena px-10 py-4 text-white flex justify-between items-center md:static lg:items-end 3xl:py-8">
+    <nav className="absolute sticky top-0 bg-principal-100 border-b-8 border-principal-300 font-sena px-10 py-4 text-white flex justify-between items-center md:static lg:items-center 3xl:py-8">
       <div className="w-full items-center flex sm:gap-8 lg:w-96 lg:flex-col lg:items-center lg:gap-2">
         <article className="flex w-52 3xl:w-80">
           <img className="w-full" src={Logo} alt="logo" />
