@@ -3,7 +3,7 @@ import React from "react";
 class Title extends React.Component {
   render() {
     return (
-      <div className="flex justify-center my-5">
+      <button className="flex justify-center mx-auto my-5 title__container">
         <h1
           className={
             this.props.titleStyle +
@@ -18,7 +18,11 @@ class Title extends React.Component {
           />
           {this.props.title}
         </h1>
-      </div>
+
+        <div className="title__sign">
+          <img src={this.props.seña} alt="lengua_de_señas" />
+        </div>
+      </button>
     );
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 //assets
-import Logo from "../../assets/static/logo-ape-blanco.svg";
+import Logo from "../../assets/static/logoicon-ape-blanco.png";
 import MenuIcon from "../../assets/static/menu-icon.png";
 import MenuIcon2 from "../../assets/static/menu-icon2.png";
 import AudioStart from "../../audio/audio_accesible.mp3";

@@ -6,6 +6,7 @@ const Turns = () => {
   return (
     <div id="contactanos">
       <Title
+        seña="https://media.giphy.com/media/bAFQns8md2BSxMLkeJ/giphy.gif"
         title="TURNOS VIRTUALES"
         line="bg-principal-300"
         titleStyle="border-principal-100"

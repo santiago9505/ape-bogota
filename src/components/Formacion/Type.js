@@ -8,13 +8,13 @@ import Complementaria from "../../assets/static/img-complementaria.jpg";
 
 const Type = () => {
   return (
-    <section className="flex flex-col bg-blue-550 leading-snug text-white font-sena font-normal text-lg">
+    <section className="flex flex-col bg-blue-550 leading-snug text-white font-sena font-normal text-lg 2xl:texl-2xl">
       <div className="lg:grid lg:grid-cols-2">
         <article className="w-full h-auto">
           <img src={Tecnicos} alt="Técnicos" />
         </article>
-        <div className="px-4 flex flex-col gap-2 tracking-tight py-8">
-          <h1 className="text-4xl">Técnicos</h1>
+        <div className="flex flex-col gap-2 tracking-tight py-8 mx-4">
+          <h1 className="text-4xl 2xl:text-5xl">Técnicos</h1>
           <h2 className="">
             Duración:
             <p>
@@ -30,20 +30,23 @@ const Type = () => {
             Programas técnicos, con duración de un año; seis meses de etapa
             lectiva, y seís meses de etapa práctica, convocatorias para
             inscripciones cada tres meses a través de Sena Sofía Plus, nivel
-            educativo requerido, noveno grado aprobado
+            educativo requerido, noveno grado aprobado.
           </p>
-          <button className="border-2 w-36 h-10 mx-auto rounded-lg p-2 my-2 hover:bg-white hover:text-black">
+          <a
+            href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion200&buscador_texto=Ej%3A+Cocina%2C+Contabilidad&ffv=-1&ciudad=BOGOTA+%28+BOGOTA+D.C.+%29&campoEmpresa=&nfct=2"
+            className="border-2 h-10 mx-auto rounded-lg px-10 p-2 my-2 hover:bg-white hover:text-black"
+          >
             Conoce más
-          </button>
+          </a>
         </div>
       </div>
 
       <div className="lg:flex lg:flex-row-reverse">
-        <article className="w-full h-auto">
+        <article className="w-full">
           <img src={Tecnologos} alt="Tecnólogos" />
         </article>
-        <div className="px-4 flex flex-col gap-2 py-8 lg:w-full">
-          <h1 className="text-4xl">Tecnólogos</h1>
+        <div className="flex flex-col gap-2 lg:w-full pl-4 pt-6">
+          <h1 className="text-4xl 2xl:text-5xl">Tecnólogos</h1>
           <h2 className="">
             Duración:
             <p>
@@ -61,9 +64,12 @@ const Type = () => {
             inscripciones cada tres meses a través de Sena Sofía Plus, nivel
             educativo requerido, bachiller académico con prueba de estado ICFES.
           </p>
-          <button className="border-2 w-36 h-10  p-2 mx-auto rounded-lg my-2 hover:bg-white hover:text-black">
+          <a
+            href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion200&buscador_texto=Ej%3A+Cocina%2C+Contabilidad&ofertaDisponible=on&ffv=-1&ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&nfct=-1#fix-opcion200"
+            className="border-2 h-10  p-2 mx-auto rounded-lg px-10 my-2 hover:bg-white hover:text-black"
+          >
             Conoce más
-          </button>
+          </a>
         </div>
       </div>
 
@@ -71,8 +77,10 @@ const Type = () => {
         <article className="w-full h-auto">
           <img src={Especializaciones} alt="Especializaciones" />
         </article>
-        <div className="px-4 flex flex-col gap-2 py-8">
-          <h1 className="text-4xl">Especializaciones Tecnológicas</h1>
+        <div className="flex flex-col gap-2 py-8 mx-4">
+          <h1 className="text-4xl 2xl:text-5xl">
+            Especializaciones Tecnológicas
+          </h1>
           <h2 className="">
             Duración:
             <p>Dos años</p>
@@ -84,11 +92,14 @@ const Type = () => {
           <p>
             Especializaciones Tecnológicas, con duración de dos años;
             convocatoria para inscripciones cada tres meses a través de Sena
-            Sofía Plus
+            Sofía Plus.
           </p>
-          <button className="border-2 w-36 h-10  p-2 mx-auto rounded-lg my-2 hover:bg-white hover:text-black">
+          <a
+            href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion200&buscador_texto=Ej%3A+Cocina%2C+Contabilidad&ofertaDisponible=on&ffv=-1&amp;ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&amp;nfct=-1#fix-opcion200"
+            className="border-2 h-10  p-2 mx-auto rounded-lg px-10 my-2 hover:bg-white hover:text-black"
+          >
             Conoce más
-          </button>
+          </a>
         </div>
       </div>
 
@@ -96,8 +107,8 @@ const Type = () => {
         <article className="w-full h-auto">
           <img src={Complementaria} alt="Complementaria" />
         </article>
-        <div className="px-4 flex flex-col gap-2 py-8">
-          <h1 className="text-4xl">Formación Complementaria</h1>
+        <div className="flex flex-col gap-2 lg:w-full pl-4 pt-6">
+          <h1 className="text-4xl 2xl:text-5xl">Formación Complementaria</h1>
           <h2 className="">
             Duración:
             <p>Entre 40 y 200 horas</p>
@@ -114,9 +125,12 @@ const Type = () => {
             en diferentes áreas de conocimiento, programas de inglés con
             vigencia durante todo el año.
           </p>
-          <button className="border-2 w-36 h-10  p-2 mx-auto rounded-lg my-2 hover:bg-white hover:text-black">
+          <a
+            href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion199&buscador_texto=ingles&ofertaDisponible=on&ffv=-1&ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&nfct=-1"
+            className="border-2 h-10  p-2 mx-auto rounded-lg px-10 my-2 hover:bg-white hover:text-black"
+          >
             Conoce más
-          </button>
+          </a>
         </div>
       </div>
     </section>

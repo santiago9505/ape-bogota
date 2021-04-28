@@ -2,15 +2,11 @@ import React from "react";
 
 const Sign = () => {
   return (
-    <div>
+    <div className="title__sign">
       <img
-        className={
-          ghyph2
-            ? "absolute top-28 right-40 w-60 block sm:w-80 sm:right-90"
-            : "hidden"
-        }
-        src="https://media.giphy.com/media/T6QoFn5bn0SS9RAjjT/giphy.gif"
-        alt=""
+        className="border-8	border-green-500"
+        src={this.props.seña}
+        alt="lengua_de_señas"
       />
     </div>
   );

@@ -27,6 +27,7 @@ const VacanciesCarousel2 = () => {
               key={index}
             >
               <Card2
+                solicitud={item.solicitud}
                 image={item.image}
                 cargoE={item.cargoE}
                 educacion1E={item.educacion1E}
@@ -43,7 +44,7 @@ const VacanciesCarousel2 = () => {
         <button
           id="slide"
           onClick={handleScrollRight}
-          className="bottom-48 arrow__right h-32"
+          className="arrow__right2 h-32"
         >
           <img
             className="w-6 origin-center transform rotate-180"
@@ -54,7 +55,7 @@ const VacanciesCarousel2 = () => {
         <button
           id="slide"
           onClick={handleScrollLeft}
-          className="arrow__left h-32"
+          className="arrow__left2 h-32"
         >
           <img className="w-6" src={ArrowLeft} alt="flecha_izquierda" />
         </button>

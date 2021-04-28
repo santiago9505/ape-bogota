@@ -6,6 +6,7 @@ const Disabilities = () => {
   return (
     <div id="empleo" className="">
       <Title
+        seña="https://media.giphy.com/media/PbmAiZCa2sCzaLZttd/giphy.gif"
         title="INTERMEDIACIÓN LABORAL PERSONAS CON DISCAPACIDAD"
         line="bg-principal-300"
         titleStyle="border-principal-200 w-11/12"

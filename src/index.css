@@ -8,6 +8,15 @@ html {
   scroll-behavior: smooth;
 }
 
+.title__sign {
+  display: none;
+}
+
+.title__container:hover .title__sign {
+  display: block;
+  transform: translate3d(110px, 0, 0);
+}
+
 #carousel__container {
   scroll-behavior: smooth;
 }
@@ -37,11 +46,41 @@ html {
   bottom: 150px;
 }
 
-.arrow__left:hover {
+.arrow__right2 {
+  position: absolute;
+  right: 10px;
+  bottom: 170px;
+}
+.arrow__left2 {
+  position: absolute;
+  left: 10px;
+  bottom: 170px;
+}
+
+.arrow__left {
   background-color: honeydew;
 }
-.arrow__right:hover {
+.arrow__right {
   background-color: honeydew;
+}
+.arrow__left2 {
+  background-color: honeydew;
+}
+.arrow__right2 {
+  background-color: honeydew;
+}
+
+.arrow__left:hover {
+  background-color: lightgoldenrodyellow;
+}
+.arrow__right:hover {
+  background-color: lightgoldenrodyellow;
+}
+.arrow__left2:hover {
+  background-color: lightgoldenrodyellow;
+}
+.arrow__right2:hover {
+  background-color: lightgoldenrodyellow;
 }
 
 .arrow__left:active {
@@ -67,6 +106,13 @@ html {
   .arrow__left {
     bottom: 190px;
   }
+  .arrow__right2 {
+    bottom: 210px;
+  }
+  .arrow__left2 {
+    bottom: 210px;
+  }
+
   .carousel {
   }
 
@@ -84,7 +130,7 @@ html {
   }
 
   .carousel__item:hover ~ .carousel__item {
-    transform: translate3d(60px, 0, 0);
+    transform: translate3d(40px, 0, 0);
   }
 
   .carousel__container:hover .carousel__item {
@@ -100,11 +146,17 @@ html {
   } */
 
   .carousel__container:hover .carousel__item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     opacity: 1;
   }
 }
 @media (min-width: 1024px) {
+  .arrow__right2 {
+    bottom: 280px;
+  }
+  .arrow__left2 {
+    bottom: 280px;
+  }
 }
 
 @media (min-width: 2034px) {

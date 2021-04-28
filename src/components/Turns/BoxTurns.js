@@ -4,9 +4,9 @@ import DataTurns from "./DataTurns.js";
 class BoxTurns extends React.Component {
   render() {
     return (
-      <div className="flex flex-col px-8 mx-4 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5">
-        <div className="flex justify-center">
-          <table className="my-4">
+      <div className="flex flex-col px-8 mx-4 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5 lg:mx-48 lg:grid lg:grid-cols-2">
+        <div className="flex justify-center lg:items-start">
+          <table className="my-4 lg:my-0">
             <tr className="">
               <th className=""># TURNO</th>
               <th>LINK DE INGRESO</th>

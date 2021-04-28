@@ -1,12 +1,12 @@
 export const VacanciesItems = [
   {
-    solicitud: "2954440",
-    cargo: "AUXILIAR ALMACÉN Y BODEGA",
-    educacion1: "Bachilleres",
-    educacion2: "Técnicos",
-    educacion3: "Tecnólogos",
+    solicitud: "2972904",
+    cargo: "ANIMADOR DISEÑO GRÁFICO",
+    educacion1: "Tecnólogos",
+    educacion2: "",
+    educacion3: "",
     descripcion:
-      "Empacar, embalar, marcar, rotular, unitarizar y consolidar la mercancía y/o carga según requerimientos de los clientes y métodos, Aplicar los métodos de recibo y despacho de bienes, y mercancías.",
+      "Tecnólogo en producción de multimedia, consultar con los clientes para establecer la naturaleza y contenido de diseños.",
     fechaPublicacion: "24/03/2021",
   },
   {

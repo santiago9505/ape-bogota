@@ -5,21 +5,21 @@ import Image1 from "../../assets/static/img-main-1.jpg";
 import Image2 from "../../assets/static/img-main-2.jpg";
 import Image3 from "../../assets/static/img-main-3.jpeg";
 const Carousel = () => {
-  const handleChange = () => {
-    let container = document.getElementById("carousel__container3");
-    container.scrollLeft += 1380;
-    handleOther();
-  };
-  const handleOther = () => {
-    let container = document.getElementById("carousel__container3");
-    container.scrollLeft += 2760;
-  };
+  // const handleChange = () => {
+  //   let container = document.getElementById("carousel__container3");
+  //   container.scrollLeft += 1380;
+  //   handleOther();
+  // };
+  // const handleOther = () => {
+  //   let container = document.getElementById("carousel__container3");
+  //   container.scrollLeft += 2760;
+  // };
 
   return (
     <section
-      className="flex overflow-x-auto overflow-y-hidden bg-red-500 h-2/5 sm:h-110 md:h-111 2xl:h-115 3xl:h-125"
+      className="flex overflow-x-auto overflow-y-hidden h-2/5 sm:h-110 md:h-111 2xl:h-115 3xl:h-125"
       id="carousel__container3"
-      onLoad={handleChange}
+      // onLoad={handleChange}
     >
       <div className="flex">
         <article className="w-screen">
@@ -44,7 +44,7 @@ const Carousel = () => {
           />
         </article>
       </div>
-      <article className="text-9xl left-28 flex bottom-2 text-principal-300 main_options">
+      {/* <article className="text-9xl left-28 flex bottom-2 text-principal-300 main_options">
         <div>
           <Link onClick={handleChange}>.</Link>
         </div>
@@ -54,7 +54,7 @@ const Carousel = () => {
         <div>
           <Link>.</Link>
         </div>
-      </article>
+      </article> */}
     </section>
   );
 };
