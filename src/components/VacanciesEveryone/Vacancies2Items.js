@@ -5,6 +5,7 @@ import Vacante4 from "../../assets/static/vacante4.PNG";
 
 export const Vacancies2Items = [
   {
+    solicitud: 2954440,
     image: Vacante1,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "Técnicos",
@@ -15,6 +16,7 @@ export const Vacancies2Items = [
     fechaPublicacionE: "24/03/2021",
   },
   {
+    solicitud: 2954440,
     image: Vacante2,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "Técnicos",
@@ -25,6 +27,7 @@ export const Vacancies2Items = [
     fechaPublicacionE: "24/03/2021",
   },
   {
+    solicitud: 2954440,
     image: Vacante3,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "Técnicos",
@@ -35,6 +38,7 @@ export const Vacancies2Items = [
     fechaPublicacionE: "24/03/2021",
   },
   {
+    solicitud: 2954440,
     image: Vacante4,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "técnicos",
@@ -45,6 +49,7 @@ export const Vacancies2Items = [
     fechaPublicacionE: "24/03/2021",
   },
   {
+    solicitud: 2954440,
     image: Vacante1,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "Técnicos",
@@ -55,6 +60,7 @@ export const Vacancies2Items = [
     fechaPublicacionE: "24/03/2021",
   },
   {
+    solicitud: 2954440,
     image: Vacante2,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "Técnicos",
@@ -65,6 +71,7 @@ export const Vacancies2Items = [
     fechaPublicacionE: "24/03/2021",
   },
   {
+    solicitud: 2954440,
     image: Vacante3,
     cargoE: "AUXILIAR ADMINISTRATIVO",
     educacion1E: "Técnicos",

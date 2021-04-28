@@ -5,10 +5,10 @@ import VacanciesItems from "./VacanciesItems.js";
 
 const VacanciesCarousel = () => {
   const handleScrollRight = () => {
-    handleChange(370);
+    handleChange(500);
   };
   const handleScrollLeft = () => {
-    handleChange(-370);
+    handleChange(-500);
   };
   const handleChange = (number) => {
     document.getElementById("carousel__container").scrollLeft += number;
@@ -19,11 +19,14 @@ const VacanciesCarousel = () => {
       <div
         onChange={handleChange}
         id="carousel__container"
-        className="flex gap-5 ml-3 font-sans overflow-x-auto overflow-y-hide items-center carousel__container"
+        className=" flex gap-5 ml-3 font-sans overflow-x-auto overflow-y-hidden  items-center carousel__container sm:ml-6"
       >
         {VacanciesItems.map((item, index) => {
           return (
-            <div className="py-2 px-4 carousel lg:py-8" key={index}>
+            <div
+              className="py-2 px-4 carousel lg:py-6 3xl:py-28 carousel__item"
+              key={index}
+            >
               <Card
                 solicitud={item.solicitud}
                 cargo={item.cargo}
@@ -41,7 +44,7 @@ const VacanciesCarousel = () => {
         <button
           id="slide"
           onClick={handleScrollRight}
-          className="bottom-48 arrow__right"
+          className="bottom-48 arrow__right active:bg-principal-100 h-32 focus:outline-white"
         >
           <img
             className="w-6 origin-center transform rotate-180"
@@ -49,7 +52,11 @@ const VacanciesCarousel = () => {
             alt="flecha_derecha"
           />
         </button>
-        <button id="slide" onClick={handleScrollLeft} className="arrow__left">
+        <button
+          id="slide"
+          onClick={handleScrollLeft}
+          className="arrow__left h-32 focus:outline-white"
+        >
           <img className="w-6" src={ArrowLeft} alt="flecha_izquierda" />
         </button>
       </div>

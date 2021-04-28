@@ -10,9 +10,13 @@ module.exports = {
         88: "22rem",
         90: "23rem",
         96: "24rem",
+        103: "27rem",
         105: "30rem",
         110: "31rem",
         111: "32rem",
+        115: "40rem",
+        120: "50rem",
+        125: "60rem",
       },
       fontSize: {
         xxxs: ".5rem",

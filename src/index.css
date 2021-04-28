@@ -29,18 +29,44 @@ html {
 .arrow__right {
   position: absolute;
   right: 10px;
-  bottom: 180px;
+  bottom: 150px;
 }
 .arrow__left {
   position: absolute;
   left: 10px;
-  bottom: 180px;
+  bottom: 150px;
+}
+
+.arrow__left:hover {
+  background-color: honeydew;
+}
+.arrow__right:hover {
+  background-color: honeydew;
+}
+
+.arrow__left:active {
+  background-color: gray;
+}
+.arrow__right:active {
+  background-color: gray;
 }
 
 @media screen and (min-width: 640px) {
+  .arrow__right {
+    bottom: 110px;
+  }
+  .arrow__left {
+    bottom: 110px;
+  }
 }
 
 @media (min-width: 768px) {
+  .arrow__right {
+    bottom: 190px;
+  }
+  .arrow__left {
+    bottom: 190px;
+  }
   .carousel {
   }
 
@@ -58,11 +84,11 @@ html {
   }
 
   .carousel__item:hover ~ .carousel__item {
-    transform: translate3d(50px, 0, 0);
+    transform: translate3d(60px, 0, 0);
   }
 
   .carousel__container:hover .carousel__item {
-    opacity: 0.57;
+    opacity: 0.3;
   }
 
   /* .arrows {
@@ -75,7 +101,17 @@ html {
 
   .carousel__container:hover .carousel__item:hover {
     transform: scale(1.1);
-    box-shadow: -4px 3px 3px rgb(209, 206, 206);
     opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 2034px) {
+  .arrow__right {
+    bottom: 300px;
+  }
+  .arrow__left {
+    bottom: 300px;
   }
 }
