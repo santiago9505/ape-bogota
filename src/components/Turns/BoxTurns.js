@@ -6,9 +6,12 @@ class BoxTurns extends React.Component {
     super();
     this.state = {
       links: [
-        { id: 0, link: "link1" },
-        { id: 1, link: "link2" },
-        { id: 2, link: "link3" },
+        { id: 1, link: "https://meet.google.com/pit-vzkz-vuu" },
+        { id: 2, link: "https://meet.google.com/pit-vzkz-vuu" },
+        { id: 3, link: "https://meet.google.com/pit-vzkz-vuu" },
+        { id: 4, link: "https://meet.google.com/pit-vzkz-vuu" },
+        { id: 5, link: "https://meet.google.com/pit-vzkz-vuu" },
+        { id: 6, link: "https://meet.google.com/pit-vzkz-vuu" },
       ],
     };
   }
@@ -34,9 +37,9 @@ class BoxTurns extends React.Component {
       );
     });
     return (
-      <div className="flex flex-col px-8 mx-4 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5 lg:mx-48 lg:grid lg:grid-cols-2">
+      <div className="flex flex-col px-8 mx-8 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5 sm:mx-20 lg:mx-48 lg:grid lg:grid-cols-2">
         <div className="flex justify-center lg:items-start">
-          <table className="w-full">
+          <table className="w-88 sm:w-90 lg:w-96">
             <tr className="">
               <th>#TURNO</th>
               <th>LINK</th>

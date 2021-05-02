@@ -45,7 +45,7 @@ const Type = () => {
         <article className="w-full">
           <img src={Tecnologos} alt="Tecnólogos" />
         </article>
-        <div className="flex flex-col gap-2 lg:w-full pl-4 pt-6">
+        <div className="flex flex-col gap-2 lg:w-full px-3 pt-6">
           <h1 className="text-4xl 2xl:text-5xl">Tecnólogos</h1>
           <h2 className="">
             Duración:
@@ -66,7 +66,7 @@ const Type = () => {
           </p>
           <a
             href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion200&buscador_texto=Ej%3A+Cocina%2C+Contabilidad&ofertaDisponible=on&ffv=-1&ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&nfct=-1#fix-opcion200"
-            className="border-2 h-10  p-2 mx-auto rounded-lg px-10 my-2 hover:bg-white hover:text-black"
+            className="border-2 h-10 p-2 mx-auto rounded-lg px-10 my-2 hover:bg-white hover:text-black"
           >
             Conoce más
           </a>
@@ -107,7 +107,7 @@ const Type = () => {
         <article className="w-full h-auto">
           <img src={Complementaria} alt="Complementaria" />
         </article>
-        <div className="flex flex-col gap-2 lg:w-full pl-4 pt-6">
+        <div className="flex flex-col gap-2 lg:w-full px-3 pt-6">
           <h1 className="text-4xl 2xl:text-5xl">Formación Complementaria</h1>
           <h2 className="">
             Duración:
@@ -125,12 +125,20 @@ const Type = () => {
             en diferentes áreas de conocimiento, programas de inglés con
             vigencia durante todo el año.
           </p>
-          <a
-            href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion199&buscador_texto=ingles&ofertaDisponible=on&ffv=-1&ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&nfct=-1"
-            className="border-2 h-10  p-2 mx-auto rounded-lg px-10 my-2 hover:bg-white hover:text-black"
-          >
-            Conoce más
-          </a>
+          <div className="flex gap-4">
+            <a
+              href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion199&buscador_texto=ingles&ofertaDisponible=on&ffv=-1&ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&nfct=-1"
+              className="border-2 h-10  p-2 rounded-lg px-4 my-2 hover:bg-white hover:text-black"
+            >
+              Conoce más
+            </a>
+            <a
+              href="http://oferta.senasofiaplus.edu.co/sofia-oferta/buscar-oferta-educativa.html?radio=opcion199&buscador_texto=ingles&ofertaDisponible=on&ffv=-1&ciudad=Ej%3A+Cali%2C+Cartagena&campoEmpresa=&nfct=-1"
+              className="border-2 h-10  p-2 rounded-lg px-8 my-2 hover:bg-white hover:text-black"
+            >
+              Inglés
+            </a>
+          </div>
         </div>
       </div>
     </section>

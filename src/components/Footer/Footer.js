@@ -14,9 +14,12 @@ const Footer = () => {
           <br />
           CONTÁCTANOS DILIGENCIANDO EL SIGUIENTE FORMULARIO
         </h2>
-        <button className="underline bg-principal-100 text-lg rounded-3xl text-white w-48 align-center p-1 mt-2 hover:bg-blue-700">
+        <a
+          href="https://forms.office.com/Pages/ResponsePage.aspx?id=gcPCyy4vk02R0VBskxas5_uaYzbSud1LmU6-S958qnFUMVZEQ0paT0JLVzFGOE5JNEJYVzNEWDQyUS4u"
+          className="underline bg-principal-100 text-lg rounded-3xl text-white w-48 align-center p-1 mt-2 hover:bg-blue-700"
+        >
           Diligencia tus datos
-        </button>
+        </a>
       </article>
       <footer className="w-full border-t-4 border-principal-200 flex flex-col items-center gap-4 text-center font-semibold text-white text-lg font-sena bg-principal-300 py-4 lg:border-t-8 lg:p-8 lg:leading-6 lg:grid lg:grid-cols-9 lg:justify-items-center">
         <article className="w-64 lg:w-72 lg:col-span-3">

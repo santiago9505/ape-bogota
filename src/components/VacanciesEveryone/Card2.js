@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/static/logoicon-ape-blanco.png";
+import Logo from "../../assets/static/logo-sena-blanco.png";
 
 class Card2 extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class Card2 extends React.Component {
             <img src={this.props.image} className="rounded-sm" alt="" />
             <img
               src={Logo}
-              className="absolute bottom-4 object-cover w-10 left-4 w-40"
+              className="absolute bottom-4 object-cover w-10 left-4"
               alt=""
             />
           </div>
