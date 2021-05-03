@@ -11,7 +11,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="realive">
+    <div className="">
       <Navbar />
       <Main />
       <Disabilities />

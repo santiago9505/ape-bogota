@@ -14,7 +14,7 @@ html {
 
 .title__container:hover .title__sign {
   display: block;
-  transform: translate3d(110px, 0, 0);
+  transform: translate3d(10px, 0, 0);
 }
 
 #carousel__container {
@@ -32,15 +32,20 @@ html {
 }
 
 .arrows {
+  display: none;
   position: relative;
 }
 
 .arrow__right {
+  background-color: lightgray;
+  opacity: 0.75;
   position: absolute;
   right: 10px;
   bottom: 150px;
 }
 .arrow__left {
+  background-color: lightgray;
+  opacity: 0.75;
   position: absolute;
   left: 10px;
   bottom: 150px;
@@ -48,39 +53,34 @@ html {
 
 .arrow__right2 {
   position: absolute;
+  opacity: 0.75;
   right: 10px;
   bottom: 170px;
 }
 .arrow__left2 {
   position: absolute;
+  opacity: 0.75;
   left: 10px;
   bottom: 170px;
 }
-
-.arrow__left {
-  background-color: honeydew;
-}
-.arrow__right {
-  background-color: honeydew;
-}
 .arrow__left2 {
-  background-color: honeydew;
+  background-color: lightgray;
 }
 .arrow__right2 {
-  background-color: honeydew;
+  background-color: lightgray;
 }
 
 .arrow__left:hover {
-  background-color: lightgoldenrodyellow;
+  background-color: lightslategray;
 }
 .arrow__right:hover {
-  background-color: lightgoldenrodyellow;
+  background-color: lightslategray;
 }
 .arrow__left2:hover {
-  background-color: lightgoldenrodyellow;
+  background-color: lightslategray;
 }
 .arrow__right2:hover {
-  background-color: lightgoldenrodyellow;
+  background-color: lightslategray;
 }
 
 .arrow__left:active {
@@ -89,6 +89,9 @@ html {
 .arrow__right:active {
   background-color: gray;
 }
+.carousel:hover .arrows {
+  display: block;
+}
 
 @media screen and (min-width: 640px) {
   .arrow__right {
@@ -96,6 +99,9 @@ html {
   }
   .arrow__left {
     bottom: 110px;
+  }
+  .title__container:hover .title__sign {
+    transform: translate3d(18px, 0, 0);
   }
 }
 
@@ -129,11 +135,22 @@ html {
     transform-origin: center left;
   }
 
+  .carousel__item3 {
+    transition: 450ms all;
+  }
+
   .carousel__item:hover ~ .carousel__item {
     transform: translate3d(40px, 0, 0);
   }
 
+  .carousel__item3:hover ~ .carousel__item3 {
+  }
+
   .carousel__container:hover .carousel__item {
+    opacity: 0.3;
+  }
+
+  .carousel__container3:hover .carousel__item3 {
     opacity: 0.3;
   }
 
@@ -148,6 +165,14 @@ html {
   .carousel__container:hover .carousel__item:hover {
     transform: scale(1.05);
     opacity: 1;
+  }
+
+  .carousel__container3:hover .carousel__item3:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  .title__container:hover .title__sign {
+    transform: translate3d(25px, 0, 0);
   }
 }
 @media (min-width: 1024px) {

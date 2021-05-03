@@ -10,6 +10,7 @@ module.exports = {
         88: "22rem",
         90: "23rem",
         96: "24rem",
+        98: "26rem",
         103: "27rem",
         105: "30rem",
         110: "31rem",
@@ -51,6 +52,9 @@ module.exports = {
         },
         green: {
           450: "#5BBD1F",
+        },
+        orange: {
+          450: "#ff6600",
         },
       },
       borderWidth: {

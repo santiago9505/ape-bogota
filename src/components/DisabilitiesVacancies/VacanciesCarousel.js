@@ -41,24 +41,24 @@ const VacanciesCarousel = () => {
         })}
       </div>
       <div id="container" className="arrows relative">
-        <button
-          id="slide"
-          onClick={handleScrollRight}
-          className="bottom-48 arrow__right active:bg-principal-100 h-32 focus:outline-white"
-        >
-          <img
-            className="w-6 origin-center transform rotate-180"
-            src={ArrowLeft}
-            alt="flecha_derecha"
-          />
-        </button>
-        <button
-          id="slide"
-          onClick={handleScrollLeft}
-          className="arrow__left h-32 focus:outline-white"
-        >
-          <img className="w-6" src={ArrowLeft} alt="flecha_izquierda" />
-        </button>
+        <div className="arrow__right">
+          <button
+            id="slide"
+            onClick={handleScrollRight}
+            className="bottom-48  h-32"
+          >
+            <img
+              className="w-6 origin-center transform rotate-180"
+              src={ArrowLeft}
+              alt="flecha_derecha"
+            />
+          </button>
+        </div>
+        <div className="arrow__left">
+          <button id="slide" onClick={handleScrollLeft} className=" h-32">
+            <img className="w-6" src={ArrowLeft} alt="flecha_izquierda" />
+          </button>
+        </div>
       </div>
     </section>
   );

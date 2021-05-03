@@ -1,4 +1,5 @@
 import React from "react";
+import Signs from "../../assets/static/signs-icon.svg";
 
 class Title extends React.Component {
   render() {
@@ -17,8 +18,10 @@ class Title extends React.Component {
             }
           />
           {this.props.title}
+          <figure className="flex items-center justify-center">
+            <img className="flex w-8" src={Signs} alt="lengua_señas" />
+          </figure>
         </h1>
-
         <div className="title__sign">
           <img src={this.props.seña} alt="lengua_de_señas" />
         </div>

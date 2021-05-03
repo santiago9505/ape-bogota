@@ -21,7 +21,7 @@ const Footer = () => {
           Diligencia tus datos
         </a>
       </article>
-      <footer className="w-full border-t-4 border-principal-200 flex flex-col items-center gap-4 text-center font-semibold text-white text-lg font-sena bg-principal-300 py-4 lg:border-t-8 lg:p-8 lg:leading-6 lg:grid lg:grid-cols-9 lg:justify-items-center">
+      <footer className="w-full border-t-4 border-principal-200 flex flex-col items-center gap-4 text-center font-semibold text-white text-base font-sena bg-principal-300 py-4 lg:border-t-8 lg:px-8 lg:leading-5 lg:grid lg:grid-cols-9 lg:justify-items-center">
         <article className="w-64 lg:w-72 lg:col-span-3">
           <h2>© Agencia Pública de Empleo - SENA, Regional Distrito Capital</h2>
         </article>
