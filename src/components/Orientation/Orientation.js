@@ -14,7 +14,7 @@ const Orientation = () => {
         titleStyle="border-principal-200"
       />
       <Introduction />
-      <div className="carousel__container3 flex flex-col items-center lg:grid lg:grid-cols-2 gap-8 xl:mx-40">
+      <div className="carousel__container3 flex flex-col items-center lg:grid lg:grid-cols-2 gap-8 lg:mx-10 xl:mx-40">
         <Card3 />
         <Card3 />
         <Card3 />

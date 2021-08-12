@@ -26,12 +26,12 @@ const Footer = () => {
           <h2>© Agencia Pública de Empleo - SENA, Regional Distrito Capital</h2>
         </article>
         <article className="flex flex-col justify-center lg:col-span-2">
-          <img className="w-8 mx-auto" src={Location} alt="Ubicación" />
+          <img className="w-8 mx-auto my-1" src={Location} alt="Ubicación" />
           <p>Ubicación</p>
           <p>Calle 65 # 11 - 70</p>
         </article>
         <article className="lg:col-span-2">
-          <img className="w-8 mx-auto" src={Email} alt="Correo" />
+          <img className="w-8 mx-auto my-1" src={Email} alt="Correo" />
           <p>Correo Electrónico</p>
           <p>spedccalle65@sena.edu.co</p>
         </article>

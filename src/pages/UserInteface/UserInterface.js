@@ -12,11 +12,15 @@ class BoxTurns extends React.Component {
 
   updateLink(e) {
     this.setState({ link: e.target.value });
-    console.log(this.state.link);
   }
 
-  deletingLink(id) {
-    firebase.database().ref("links").child(id).remove();
+  deleteLink(e) {
+    firebase
+      .database()
+      .ref("links/")
+      .on("value", (snap) => {
+        console.log(snap.val());
+      });
   }
 
   handleSubmit(e) {
@@ -52,9 +56,7 @@ class BoxTurns extends React.Component {
         <tr key={item.id}>
           <td>{item.id}</td>
           <td className="text-principal-100">
-            <a onClick={this.deletingLink(item.id)} href={item.link}>
-              {item.link}
-            </a>
+            <a href={item.link}>{item.link}</a>
           </td>
         </tr>
       );
@@ -69,33 +71,7 @@ class BoxTurns extends React.Component {
                 <th>LINK</th>
               </tr>
               {linksList}
-              {/* {links.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td className="text-principal-100">
-                    <a href={item.link}>{item.link}</a>
-                  </td>
-                </tr>
-              );
-            })} */}
             </table>
-            {/* <table className="my-4 lg:my-0">
-            <tr className="">
-              <th className=""># TURNO</th>
-              <th>LINK DE INGRESO</th>
-            </tr>
-            {DataTurns.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td className="text-principal-100">
-                    <a href={item.link}>{item.link}</a>
-                  </td>
-                </tr>
-              );
-            })}
-          </table> */}
           </div>
           <div className="h-full">
             <h3 className="font-extrabold sm:mb-3">SERVICIO AL CLIENTE</h3>
@@ -117,20 +93,43 @@ class BoxTurns extends React.Component {
             </div>
           </div>
         </div>
-        <div>
-          {/* <form action="" onSubmit={this.handleSubmit.bind(this)}>
-            <label htmlFor="">
+        <div className="flex flex-col justify-center my-10 font-sena text-xl">
+          <div className="flex justify-center my-5">
+            <a
+              className="bg-blue-450 text-center justify-self-center hover:bg-principal-100 text-white w-60 py-0.5 rounded-full"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://meet.google.com/new"
+            >
+              Crea tu reunión
+            </a>
+          </div>
+
+          <div className="flex text-3xl justify-center my-2">
+            <h1>Ingresa el link aquí</h1>
+          </div>
+          <form
+            className="flex justify-center items-center gap-8"
+            action=""
+            onSubmit={this.handleSubmit.bind(this)}
+          >
+            <label className="flex gap-8" htmlFor="">
               <span>Link</span>
               <input
+                className="bg-gray-300 rounded-full px-2"
                 type="text"
                 value={this.state.link}
                 onChange={this.updateLink.bind(this)}
+                required
               />
             </label>
             <label htmlFor="">
-              <input type="submit" />
+              <input
+                className="bg-blue-450 hover:bg-principal-100 text-white w-60 py-0.5 rounded-full"
+                type="submit"
+              />
             </label>
-          </form> */}
+          </form>
         </div>
       </section>
     );

@@ -15,7 +15,7 @@ const Home = () => {
       <Navbar />
       <Main />
       <Disabilities />
-      <VacanciesE />
+      {/* <VacanciesE /> */}
       <Formacion />
       <Orientation />
       <Turns />
