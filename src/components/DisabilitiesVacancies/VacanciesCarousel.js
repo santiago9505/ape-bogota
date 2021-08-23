@@ -31,7 +31,7 @@ class VacanciesCarousel extends React.Component {
               >
                 <Card
                   solicitud={item.solicitud}
-                  cargo={item.cargo}
+                  cargo={item.cargo.toUpperCase()}
                   educacion1={item.educacion1}
                   educacion2={item.educacion2}
                   educacion3={item.educacion3}

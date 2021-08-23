@@ -1,5 +1,34 @@
 export const VacanciesItems = [
   {
+    solicitud: "3056099",
+    cargo: "VIGILANTE",
+    educacion1: "bachilleres",
+    educacion2: "técnicos",
+    educacion3: "tecnólogos",
+    descripcion: "Hacer cumplir las normas y mantener el orden.",
+    fechaPublicacion: "13/08/2021",
+  },
+  {
+    solicitud: "3057798",
+    cargo: "MENSAJERO",
+    educacion1: "bachilleres",
+    educacion2: "técnicos",
+    educacion3: "tecnólogos",
+    descripcion:
+      "Conocimiento en radicación de documentos, manejo de correspondecia y manejo de dinero.",
+    fechaPublicacion: "17/08/2021",
+  },
+  {
+    solicitud: "3058176",
+    cargo: "Auxiliar Mecánica",
+    educacion1: "bachilleres",
+    educacion2: "técnicos",
+    educacion3: "tecnólogos",
+    descripcion:
+      "Conocimiento en manejo de herramientas de diagnostico automotriz.",
+    fechaPublicacion: "17/08/2021",
+  },
+  {
     solicitud: "3052788",
     cargo: "Tecnólogo en Electrónica",
     educacion1: "técnicos",
@@ -54,16 +83,6 @@ export const VacanciesItems = [
     educacion3: "tecnólogos",
     descripcion:
       "Con alta orientación al cliente, manejo de excel en tablas dinámicas y cruce de bases de datos.",
-    fechaPublicacion: "23/07/2021",
-  },
-
-  {
-    solicitud: "3038059",
-    cargo: "CONTADOR PÚBLICO",
-    educacion1: "profesionales",
-    educacion2: "contabilidad",
-    educacion3: "público",
-    descripcion: "Gestionar, supervisar y calcular costos.",
     fechaPublicacion: "23/07/2021",
   },
 ];
