@@ -8,7 +8,7 @@ const LastOffer = () => {
       </article>
       <article className="flex justify-between px-3 gap-5 lg:justify-evenly">
         <p className="bg-green-450 text-center rounded-sm shadow-2xl p-2 text-white pt-3 self-center lg:w-48 lg:font-semibold lg:pt-2 2xl:w-72">
-          DEL 05 AL 11 DE MARZO DEL 2021
+          DEL 20 AL 30 DE AGOSTO DEL 2021
         </p>
         <p className="text-blue-450 text-center w-96 lg:w-72 2xl:w-88">
           Inscripciones a programas de formación en modalidades presencial y a

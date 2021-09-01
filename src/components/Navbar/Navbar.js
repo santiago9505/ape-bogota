@@ -55,13 +55,13 @@ const Navbar = () => {
         <article className="flex w-52 3xl:w-80">
           <img className="w-full" src={Logo} alt="logo" />
         </article>
-        <audio
+        {/* <audio
           className="h-4 flex w-20 hidden sm:flex sm:w-3/6 md:w-3/6 md:max-w-md lg:w-full 3xl:h-7"
           alt="audio_presiona_espacio"
           controls
         >
           <source src={AudioStart} type="audio/mp3" />
-        </audio>
+        </audio> */}
       </div>
 
       <Link
