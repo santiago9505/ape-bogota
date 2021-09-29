@@ -14,7 +14,7 @@ const SearchVacancies = ({ searchValue, setSearchValue }) => {
         >
           <span>Buscar:</span>
           <input
-            className="w-80 bg-gray-200 px-2 py-1 font-sena border-1 rounded-md"
+            className="w-80 focus:outline-none focus:ring focus:border-blue-300 bg-gray-200 px-2 py-1 font-sena border-1 rounded-md"
             onChange={onSearchValueChange}
             placeholder="Búsqueda por cargo"
             type="text"

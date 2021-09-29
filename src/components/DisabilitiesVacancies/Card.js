@@ -13,13 +13,31 @@ class Card extends React.Component {
         <div className="flex flex-col justify-center content-center text-lg font-extrabold w-full h-10 gap-1 md:text-xl 3xl:text-3xl">
           <p>{this.props.cargo}</p>
           <div className="flex justify-center text-sm font-normal gap-1 md:gap-2 2xl:text-lg">
-            <div className="bg-principal-200 rounded-2xl px-2">
+            <div
+              className={
+                this.props.educacion1
+                  ? "bg-principal-200 rounded-2xl px-2"
+                  : "hidden"
+              }
+            >
               <h6 className="">{this.props.educacion1}</h6>
             </div>
-            <div className="bg-blue-450 rounded-2xl px-3">
+            <div
+              className={
+                this.props.educacion2
+                  ? "bg-blue-450 rounded-2xl px-3"
+                  : "hidden"
+              }
+            >
               <h6 className="text-white">{this.props.educacion2}</h6>
             </div>
-            <div className="bg-principal-200 rounded-2xl px-3">
+            <div
+              className={
+                this.props.educacion3
+                  ? "bg-principal-200 rounded-2xl px-3"
+                  : "hidden"
+              }
+            >
               <h6 className="">{this.props.educacion3}</h6>
             </div>
           </div>

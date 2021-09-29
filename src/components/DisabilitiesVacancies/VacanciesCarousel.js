@@ -49,9 +49,15 @@ const VacanciesCarousel = () => {
               <Card
                 solicitud={item.solicitud}
                 cargo={item.cargo.toUpperCase()}
-                educacion1={item.educacion1}
-                educacion2={item.educacion2}
-                educacion3={item.educacion3}
+                educacion1={
+                  item.educacion1 ? item.educacion1.toLowerCase() : null
+                }
+                educacion2={
+                  item.educacion2 ? item.educacion2.toLowerCase() : null
+                }
+                educacion3={
+                  item.educacion3 ? item.educacion3.toLowerCase() : null
+                }
                 descripcion={item.descripcion}
                 fechaPublicacion={item.fechaPublicacion}
               />
