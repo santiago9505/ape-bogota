@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Card from "./Card.js";
 import ArrowLeft from "../../assets/static/arrow-left.png";
-import VacanciesItems from "./VacanciesItems.js";
 import SearchVacancies from "./SearchVacancies.js";
 
 const VacanciesCarousel = () => {
   const [searchValue, setSearchValue] = React.useState("");
+  const [vacancies, setVacancies] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const url =
+      "https://ape-bogota-react-default-rtdb.firebaseio.com/vacancies.json";
+    const data = await fetch(url);
+    const vacanciesinfo = await data.json();
+    setVacancies(vacanciesinfo);
+  };
+
+  console.log(vacancies);
 
   let allVacancies = [];
 
   if (!searchValue.length > 1) {
-    allVacancies = VacanciesItems;
+    allVacancies = vacancies;
   } else {
-    allVacancies = VacanciesItems.filter((vacancie) => {
+    allVacancies = vacancies.filter((vacancie) => {
       const vacancieCargo = vacancie.cargo.toLowerCase();
       const searchText = searchValue.toLowerCase();
       return vacancieCargo.includes(searchText);

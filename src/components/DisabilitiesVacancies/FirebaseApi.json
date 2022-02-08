@@ -1,0 +1,28 @@
+{
+  "vacancies": [
+    {
+      "solicitud": "3113532",
+      "cargo": "Vigilante guardia de seguridad",
+      "educacion1": "bachilleres",
+      "descripcion": "Competencia en lectura y escritura.",
+      "fechaPublicacion": "16/11/2021"
+    },
+    {
+      "solicitud": "3129212",
+      "cargo": "Auxiliar Biblioteca",
+      "educacion1": "bachiller",
+      "educacion2": "técnicos",
+      "descripcion": "Con conocimientos en la atención a usuarios de bibliotecas, 24 meses de experiencia",
+      "fechaPublicacion": "2/12/2021"
+    },
+    {
+      "solicitud": "3129326",
+      "cargo": "Auxiliar Administrativo",
+      "educacion1": "bachilleres",
+      "educacion2": "técnicos",
+      "educacion3": "tecnólogos",
+      "descripcion": "Con habilidades en digitación elaboración de documentos yatención a clientes, 24 meses de experiencia ",
+      "fechaPublicacion": "2/12/2021"
+    }
+  ]
+}

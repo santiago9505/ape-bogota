@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import config from "../firebase";
 
-export const Context = React.createContext();
+export const AuthContext = React.createContext();
 
-export const ContextProvider = ({ children }) => {
+export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
@@ -11,6 +11,8 @@ export const ContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <Context.Provider value={{ currentUser }}>{children}</Context.Provider>
+    <AuthContext.Provider value={{ currentUser }}>
+      {children}
+    </AuthContext.Provider>
   );
 };

@@ -1,91 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import firebase from "../../firebase.js";
 
-class BoxTurns extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      link: "",
-      links: [],
-    };
-  }
+const BoxTurns = () => {
+  const [turns, setTurns] = useState([]);
 
-  updateLink(e) {
-    this.setState({ link: e.target.value });
-    console.log(this.state.link);
-  }
+  useEffect(() => {
+    getData();
+  }, []);
 
-  deletingLink(id) {
-    firebase.database().ref("links").child(id).remove();
-  }
+  const getData = async () => {
+    const url =
+      "https://ape-bogota-react-default-rtdb.firebaseio.com/turns.json";
+    const data = await fetch(url);
+    const turnsinfo = await data.json();
+    setTurns(turnsinfo);
+  };
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const list = this.state.links;
-    const newLink = {
-      id: this.state.links.length,
-      link: this.state.link,
-    };
-    // list.push(newLink);
-    // this.setState({ links: list });
-    firebase.database().ref(`links/${newLink.id}`).set(newLink);
-    this.setState({ link: "" });
-  }
-
-  componentDidMount() {
-    firebase
-      .database()
-      .ref("links/")
-      .on("value", (snap) => {
-        const currentLinks = snap.val();
-        if (currentLinks !== null) {
-          this.setState({
-            links: currentLinks,
-          });
-        }
-      });
-  }
-  render() {
-    const { links } = this.state;
-    const linksList = links.map((item) => {
-      return (
-        <tr key={item.id}>
-          <td>{item.id}</td>
-          <td className="text-principal-100">
-            <a onClick={this.deletingLink(item.id)} href={item.link}>
-              {item.link}
-            </a>
-          </td>
-        </tr>
-      );
-    });
-    return (
-      <section>
-        <div className="flex flex-col px-8 mx-8 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5 sm:mx-20 lg:mx-48 lg:grid lg:grid-cols-2">
-          <div className="flex justify-center lg:items-start">
-            <table className="w-88 sm:w-90 lg:w-110">
-              <tr className="">
-                <th>#TURNO</th>
-                <th>LINK</th>
-              </tr>
-              {linksList}
-              {/* {links.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td className="text-principal-100">
-                    <a href={item.link}>{item.link}</a>
-                  </td>
-                </tr>
-              );
-            })} */}
-            </table>
-            {/* <table className="my-4 lg:my-0">
+  return (
+    <section>
+      <div className="flex flex-col px-8 mx-8 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5 sm:mx-20 lg:mx-48 lg:grid lg:grid-cols-2">
+        <div className="flex justify-center lg:items-start">
+          <table className="w-88 sm:w-90 lg:w-110">
             <tr className="">
-              <th className=""># TURNO</th>
-              <th>LINK DE INGRESO</th>
+              <th>#TURNO</th>
+              <th>LINK</th>
             </tr>
-            {DataTurns.map((item, index) => {
+            {Object.values(turns).map((item, index) => {
               return (
                 <tr key={index}>
                   <td>{index + 1}</td>
@@ -95,45 +35,29 @@ class BoxTurns extends React.Component {
                 </tr>
               );
             })}
-          </table> */}
-          </div>
-          <div className="h-full">
-            <h3 className="font-extrabold sm:mb-3">SERVICIO AL CLIENTE</h3>
-            <div className="flex flex-col gap-2 text-white sm:gap-4 sm:w-80 sm:mx-auto">
-              <p className="bg-blue-475 rounded-lg p-2">
-                Estamos para servirle, y atender su necesidad de la mejor
-                manera.
-              </p>
-              <p className="bg-blue-475 rounded-lg p-2 ">
-                Para ingresar debe registrarse con una cuenta de google.
-              </p>
-              <p className="bg-blue-475 rounded-lg p-2 ">
-                Recuerde ser respetuoso con el orientador(a) que le corresponde.
-              </p>
-              <p className="bg-blue-475 rounded-lg p-2 ">
-                En caso de no contar con ningún turno disponible, puede
-                registrar sus datos haciendo click aquí.
-              </p>
-            </div>
+          </table>
+        </div>
+        <div className="h-full">
+          <h3 className="font-extrabold sm:mb-3">SERVICIO AL CLIENTE</h3>
+          <div className="flex flex-col gap-2 text-white sm:gap-4 sm:w-80 sm:mx-auto">
+            <p className="bg-blue-475 rounded-lg p-2">
+              Estamos para servirle, y atender su necesidad de la mejor manera.
+            </p>
+            <p className="bg-blue-475 rounded-lg p-2 ">
+              Para ingresar debe registrarse con una cuenta de google.
+            </p>
+            <p className="bg-blue-475 rounded-lg p-2 ">
+              Recuerde ser respetuoso con el orientador(a) que le corresponde.
+            </p>
+            <p className="bg-blue-475 rounded-lg p-2 ">
+              En caso de no contar con ningún turno disponible, puede registrar
+              sus datos haciendo click aquí.
+            </p>
           </div>
         </div>
-        <div>
-          {/* <form action="" onSubmit={this.handleSubmit.bind(this)}>
-            <label htmlFor="">
-              <span>Link</span>
-              <input
-                type="text"
-                value={this.state.link}
-                onChange={this.updateLink.bind(this)}
-              />
-            </label>
-            <label htmlFor="">
-              <input type="submit" />
-            </label>
-          </form> */}
-        </div>
-      </section>
-    );
-  }
-}
+      </div>
+      <div></div>
+    </section>
+  );
+};
 export default BoxTurns;
