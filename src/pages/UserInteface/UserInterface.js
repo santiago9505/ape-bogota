@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import VacanciesCarousel from "../../components/DisabilitiesVacancies/VacanciesCarousel.js";
 import firebase from "../../firebase.js";
 
 const BoxTurns = () => {
   const [turns, setTurns] = useState([{}]);
+  const [vacancies, setVacancies] = useState([{}]);
 
   useEffect(() => {
     getData();
@@ -26,6 +28,31 @@ const BoxTurns = () => {
       link: link,
     };
     linkRef.set(newLink);
+    setTurns({ ...turns, newLink });
+  };
+
+  const addingNewVacancies = async (event) => {
+    event.preventDefault();
+    const vacancieRef = firebase.database().ref("vacancies").push();
+    const {
+      cargo,
+      descripcion,
+      educacion1,
+      educacion2,
+      educacion3,
+      fechaPublicacion,
+      solicitud,
+    } = event.target.elements;
+    const newVacancie = {
+      cargo: cargo,
+      descripcion: descripcion,
+      educacion1: educacion1,
+      educacion2: educacion2,
+      educacion3: educacion3,
+      fechaPublicacion: fechaPublicacion,
+      solicitud: solicitud,
+    };
+    vacancieRef.set(newVacancie);
   };
 
   return (
@@ -105,6 +132,78 @@ const BoxTurns = () => {
           </label>
         </form>
       </div>
+      <VacanciesCarousel />
+      <form onSubmit={addingNewVacancies} className="block" action="">
+        <label className="flex gap-8" htmlFor="">
+          <span>Cargo</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="cargo"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex gap-8" htmlFor="">
+          <span>Descripcion</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="descripcion"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex gap-8" htmlFor="">
+          <span>Educacion 1</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="educacion1"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex gap-8" htmlFor="">
+          <span>Educacion 2</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="educacion2"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex gap-8" htmlFor="">
+          <span>Educacion 3</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="educacion3"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex gap-8" htmlFor="">
+          <span>Fecha pubicacion</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="fechaPublicacion"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex gap-8" htmlFor="">
+          <span>Número de solicitud</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="solicitud"
+            type="text"
+            required
+          />
+        </label>
+        <label htmlFor="">
+          <input
+            className="bg-blue-450 hover:bg-principal-100 text-white w-60 py-0.5 rounded-full"
+            type="submit"
+          />
+        </label>
+      </form>
     </section>
   );
 };

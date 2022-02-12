@@ -16,6 +16,14 @@ const BoxTurns = () => {
     setTurns(turnsinfo);
   };
 
+  const deleteLink = async (id) => {
+    const url = `https://ape-bogota-react-default-rtdb.firebaseio.com/turns/${id}.json`;
+    const data = await fetch(url, {
+      method: "DELETE",
+    });
+    getData();
+  };
+
   return (
     <section>
       <div className="flex flex-col px-8 mx-8 rounded-xl mb-4 bg-gray-100 border-2 border-black py-4 font-sena text-center text-lg sm:py-5 sm:mx-20 lg:mx-48 lg:grid lg:grid-cols-2">
@@ -26,14 +34,27 @@ const BoxTurns = () => {
               <th>LINK</th>
             </tr>
             {Object.values(turns).map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index + 1}</td>
-                  <td className="text-principal-100">
-                    <a href={item.link}>{item.link}</a>
-                  </td>
-                </tr>
-              );
+              if (turns === null) {
+                return (
+                  <tr>
+                    <td>{index + 1}</td>
+                    <td className="text-principal-100">
+                      <p>No hay turnos disponibles en este momento</p>
+                    </td>
+                  </tr>
+                );
+              } else {
+                return (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td className="text-principal-100">
+                      <a onClick={() => deleteLink(item.id)} href={item.link}>
+                        {item.link}
+                      </a>
+                    </td>
+                  </tr>
+                );
+              }
             })}
           </table>
         </div>
