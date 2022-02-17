@@ -8,6 +8,7 @@ const BoxTurns = () => {
 
   useEffect(() => {
     getData();
+    getVacancies();
   }, []);
 
   const getData = async () => {
@@ -16,6 +17,14 @@ const BoxTurns = () => {
     const data = await fetch(url);
     const turnsinfo = await data.json();
     setTurns(turnsinfo);
+  };
+
+  const getVacancies = async () => {
+    const url =
+      "https://ape-bogota-react-default-rtdb.firebaseio.com/vacancies.json";
+    const data = await fetch(url);
+    const vacanciesinfo = await data.json();
+    setVacancies(vacanciesinfo);
   };
 
   const addingNewTurn = async (event) => {
@@ -29,23 +38,24 @@ const BoxTurns = () => {
     };
     linkRef.set(newLink);
     setTurns({ ...turns, newLink });
+    getData();
   };
 
   const addingNewVacancies = async (event) => {
     event.preventDefault();
     const vacancieRef = firebase.database().ref("vacancies").push();
-    const {
-      cargo,
-      descripcion,
-      educacion1,
-      educacion2,
-      educacion3,
-      fechaPublicacion,
-      solicitud,
-    } = event.target.elements;
+    const key = vacancieRef.key;
+    const cargo = event.target.cargo.value;
+    const description = event.target.description.value;
+    const educacion1 = event.target.educacion1.value;
+    const educacion2 = event.target.educacion2.value;
+    const educacion3 = event.target.educacion3.value;
+    const fechaPublicacion = event.target.fechaPublicacion.value;
+    const solicitud = event.target.solicitud.value;
     const newVacancie = {
+      id: key,
       cargo: cargo,
-      descripcion: descripcion,
+      description: description,
       educacion1: educacion1,
       educacion2: educacion2,
       educacion3: educacion3,
@@ -53,6 +63,8 @@ const BoxTurns = () => {
       solicitud: solicitud,
     };
     vacancieRef.set(newVacancie);
+    setVacancies({ ...vacancies, newVacancie });
+    getVacancies();
   };
 
   return (
@@ -133,8 +145,15 @@ const BoxTurns = () => {
         </form>
       </div>
       <VacanciesCarousel />
-      <form onSubmit={addingNewVacancies} className="block" action="">
-        <label className="flex gap-8" htmlFor="">
+      <div className="flex text-3xl justify-center my-2">
+        <h1>Agrega nuevas vacantes</h1>
+      </div>
+      <form
+        onSubmit={addingNewVacancies}
+        className="grid justify-items-center content-center grid-cols-2 gap-8 border-4 rounded-md m-8 p-8"
+        action=""
+      >
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Cargo</span>
           <input
             className="bg-gray-300 rounded-full px-2"
@@ -143,16 +162,16 @@ const BoxTurns = () => {
             required
           />
         </label>
-        <label className="flex gap-8" htmlFor="">
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Descripcion</span>
           <input
             className="bg-gray-300 rounded-full px-2"
-            name="descripcion"
+            name="description"
             type="text"
             required
           />
         </label>
-        <label className="flex gap-8" htmlFor="">
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Educacion 1</span>
           <input
             className="bg-gray-300 rounded-full px-2"
@@ -161,7 +180,7 @@ const BoxTurns = () => {
             required
           />
         </label>
-        <label className="flex gap-8" htmlFor="">
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Educacion 2</span>
           <input
             className="bg-gray-300 rounded-full px-2"
@@ -170,16 +189,16 @@ const BoxTurns = () => {
             required
           />
         </label>
-        <label className="flex gap-8" htmlFor="">
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Educacion 3</span>
           <input
-            className="bg-gray-300 rounded-full px-2"
+            className="bg-gray-300 flex-col rounded-full px-2"
             name="educacion3"
             type="text"
             required
           />
         </label>
-        <label className="flex gap-8" htmlFor="">
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Fecha pubicacion</span>
           <input
             className="bg-gray-300 rounded-full px-2"
@@ -188,7 +207,7 @@ const BoxTurns = () => {
             required
           />
         </label>
-        <label className="flex gap-8" htmlFor="">
+        <label className="flex flex-col gap-2" htmlFor="">
           <span>Número de solicitud</span>
           <input
             className="bg-gray-300 rounded-full px-2"
@@ -197,9 +216,9 @@ const BoxTurns = () => {
             required
           />
         </label>
-        <label htmlFor="">
+        <label className="self-center " htmlFor="">
           <input
-            className="bg-blue-450 hover:bg-principal-100 text-white w-60 py-0.5 rounded-full"
+            className="bg-blue-450 hover:bg-principal-100 text-white w-60 py-0.5 rounded-full cursor-pointer"
             type="submit"
           />
         </label>

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card.js";
 import ArrowLeft from "../../assets/static/arrow-left.png";
-import SearchVacancies from "./SearchVacancies.js";
 
 const VacanciesCarousel = () => {
-  const [searchValue, setSearchValue] = React.useState("");
+  // const [searchValue, setSearchValue] = React.useState("");
   const [vacancies, setVacancies] = useState([]);
 
   useEffect(() => {
@@ -21,18 +20,6 @@ const VacanciesCarousel = () => {
 
   console.log(vacancies);
 
-  let allVacancies = [];
-
-  if (!searchValue.length > 1) {
-    allVacancies = vacancies;
-  } else {
-    allVacancies = vacancies.filter((vacancie) => {
-      const vacancieCargo = vacancie.cargo.toLowerCase();
-      const searchText = searchValue.toLowerCase();
-      return vacancieCargo.includes(searchText);
-    });
-  }
-
   const handleScrollRight = () => {
     handleChange(500);
   };
@@ -45,16 +32,16 @@ const VacanciesCarousel = () => {
 
   return (
     <section className="carousel">
-      <SearchVacancies
+      {/* <SearchVacancies
         searchValue={searchValue}
         setSearchValue={setSearchValue}
-      />
+      /> */}
       <div
         onChange={handleChange}
         id="carousel__container"
         className=" flex gap-5 ml-3 font-sans overflow-x-auto overflow-y-hidden  items-center carousel__container sm:ml-6"
       >
-        {allVacancies.map((item, index) => {
+        {Object.values(vacancies).map((item, index) => {
           return (
             <div
               className="py-2 px-4 carousel lg:py-6 3xl:py-28 carousel__item"
@@ -72,7 +59,7 @@ const VacanciesCarousel = () => {
                 educacion3={
                   item.educacion3 ? item.educacion3.toLowerCase() : null
                 }
-                descripcion={item.descripcion}
+                descripcion={item.description}
                 fechaPublicacion={item.fechaPublicacion}
               />
             </div>

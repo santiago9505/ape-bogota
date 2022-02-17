@@ -4,10 +4,12 @@ import Title from "../../components/Titles/Title.js";
 import { AuthContext } from "../../auth/Auth";
 import UserInterface from "./UserInterface";
 import config from "../../firebase";
+import Navbar from "../../components/Navbar/Navbar";
 
 const Turns = () => {
   return (
     <div id="contactanos">
+      <Navbar />
       <Title
         seña="https://media.giphy.com/media/bAFQns8md2BSxMLkeJ/giphy.gif"
         title="ACTUALIZA LOS TURNOS VIRTUALES"
