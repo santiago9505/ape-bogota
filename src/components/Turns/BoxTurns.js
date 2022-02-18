@@ -33,29 +33,33 @@ const BoxTurns = () => {
               <th>#TURNO</th>
               <th>LINK</th>
             </tr>
-            {Object.values(turns).map((item, index) => {
-              if (turns === null) {
-                return (
-                  <tr>
-                    <td>{index + 1}</td>
-                    <td className="text-principal-100">
-                      <p>No hay turnos disponibles en este momento</p>
-                    </td>
-                  </tr>
-                );
-              } else {
-                return (
-                  <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td className="text-principal-100">
-                      <a onClick={() => deleteLink(item.id)} href={item.link}>
-                        {item.link}
-                      </a>
-                    </td>
-                  </tr>
-                );
-              }
-            })}
+            {turns ? (
+              Object.values(turns).map((item, index) => {
+                if (turns === null) {
+                  return (
+                    <tr>
+                      <td>{index + 1}</td>
+                      <td className="text-principal-100">
+                        <p>No hay turnos disponibles en este momento</p>
+                      </td>
+                    </tr>
+                  );
+                } else {
+                  return (
+                    <tr key={index}>
+                      <td>{index + 1}</td>
+                      <td className="text-principal-100">
+                        <a onClick={() => deleteLink(item.id)} href={item.link}>
+                          {item.link}
+                        </a>
+                      </td>
+                    </tr>
+                  );
+                }
+              })
+            ) : (
+              <h1>No hay turnos disponibles en el momento</h1>
+            )}
           </table>
         </div>
         <div className="h-full">

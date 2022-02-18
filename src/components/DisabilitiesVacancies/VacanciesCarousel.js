@@ -41,30 +41,35 @@ const VacanciesCarousel = () => {
         id="carousel__container"
         className=" flex gap-5 ml-3 font-sans overflow-x-auto overflow-y-hidden  items-center carousel__container sm:ml-6"
       >
-        {Object.values(vacancies).map((item, index) => {
-          return (
-            <div
-              className="py-2 px-4 carousel lg:py-6 3xl:py-28 carousel__item"
-              key={index}
-            >
-              <Card
-                solicitud={item.solicitud}
-                cargo={item.cargo.toUpperCase()}
-                educacion1={
-                  item.educacion1 ? item.educacion1.toLowerCase() : null
-                }
-                educacion2={
-                  item.educacion2 ? item.educacion2.toLowerCase() : null
-                }
-                educacion3={
-                  item.educacion3 ? item.educacion3.toLowerCase() : null
-                }
-                descripcion={item.description}
-                fechaPublicacion={item.fechaPublicacion}
-              />
-            </div>
-          );
-        })}
+        {vacancies ? (
+          Object.values(vacancies).map((item, index) => {
+            return (
+              <div
+                className="py-2 px-4 carousel lg:py-6 3xl:py-28 carousel__item"
+                key={index}
+              >
+                <Card
+                  id={item.id}
+                  solicitud={item.solicitud}
+                  cargo={item.cargo.toUpperCase()}
+                  educacion1={
+                    item.educacion1 ? item.educacion1.toLowerCase() : null
+                  }
+                  educacion2={
+                    item.educacion2 ? item.educacion2.toLowerCase() : null
+                  }
+                  educacion3={
+                    item.educacion3 ? item.educacion3.toLowerCase() : null
+                  }
+                  descripcion={item.description}
+                  fechaPublicacion={item.fechaPublicacion}
+                />
+              </div>
+            );
+          })
+        ) : (
+          <h1>En este momento no se encuentran vacantes disponibles</h1>
+        )}
       </div>
       <div id="container" className="arrows relative">
         <div className="arrow__right">
