@@ -18,8 +18,6 @@ const VacanciesCarousel = () => {
     setVacancies(vacanciesinfo);
   };
 
-  console.log(vacancies);
-
   const handleScrollRight = () => {
     handleChange(500);
   };

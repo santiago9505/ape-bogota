@@ -36,8 +36,7 @@ const BoxTurns = () => {
       id: key,
       link: link,
     };
-    linkRef.set(newLink);
-    setTurns({ ...turns, newLink });
+    await linkRef.set(newLink);
     getData();
   };
 
@@ -62,8 +61,7 @@ const BoxTurns = () => {
       fechaPublicacion: fechaPublicacion,
       solicitud: solicitud,
     };
-    vacancieRef.set(newVacancie);
-    setVacancies({ ...vacancies, newVacancie });
+    await vacancieRef.set(newVacancie);
     getVacancies();
   };
 
