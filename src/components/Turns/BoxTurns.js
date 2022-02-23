@@ -76,7 +76,14 @@ const BoxTurns = () => {
             </p>
             <p className="bg-blue-475 rounded-lg p-2 ">
               En caso de no contar con ningún turno disponible, puede registrar
-              sus datos haciendo click aquí.
+              sus datos haciendo{" "}
+              <a
+                className="underline"
+                href="https://forms.office.com/Pages/ResponsePage.aspx?id=gcPCyy4vk02R0VBskxas5_uaYzbSud1LmU6-S958qnFUMVZEQ0paT0JLVzFGOE5JNEJYVzNEWDQyUS4u"
+              >
+                click aquí
+              </a>
+              .
             </p>
           </div>
         </div>

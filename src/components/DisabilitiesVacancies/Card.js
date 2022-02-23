@@ -31,8 +31,6 @@ const Card = ({
     const data = await fetch(url, {
       method: "DELETE",
     });
-    const vacanciesinfo = await data.json();
-    setVacancies(vacanciesinfo);
     getData();
   };
 

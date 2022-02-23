@@ -2,7 +2,7 @@ import React from "react";
 import LogoSena from "../../assets/static/logo-sena-blanco.png";
 import Teams from "../../assets/static/teams-icon.png";
 
-const Card3 = () => {
+const Card3 = ({ name, description, link }) => {
   return (
     <button
       href=""
@@ -12,23 +12,18 @@ const Card3 = () => {
         <p></p>
       </div>
       <div className="flex flex-col justify-center content-center text-left mx-4 font-extrabold text-principal-100 w-full h-10 gap-1 md:text-2xl 3xl:text-3xl">
-        <p>TALLER DE ADAPTABILIDAD Y SOSTENIBILIDAD</p>
+        <p>{name}</p>
       </div>
 
       <div className="text-left px-4 text-lg 3xl:text-2xl">
-        <p>
-          Reconocer las competencias que son claves en el desarrollo del trabajo
-          para lograr mantenerse en el mercado laboral.
-        </p>
+        <p>{description}</p>
       </div>
       <div className="w-full flex justify-between mx-4 items-end">
         <figure className="w-16">
           <img src={Teams} alt="" />
         </figure>
         <a
-          href={
-            "https://agenciapublicadeempleo.sena.edu.co/spe-web/spe/demanda/solicitud-sintesis/"
-          }
+          href={link}
           className="h-7 py-1 px-10 bg-blue-450 rounded-2xl hover:bg-principal-100 rounded-sm font-sans text-sm font-medium text-white h-5 3xl:text-lg"
         >
           INSCRIPCIONES

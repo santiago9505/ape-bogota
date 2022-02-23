@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
 import VacanciesCarousel from "../../components/DisabilitiesVacancies/VacanciesCarousel.js";
 import firebase from "../../firebase.js";
+import Card from "../../components/DisabilitiesVacancies/Card.js";
+import ArrowLeft from "../../assets/static/arrow-left.png";
 
 const BoxTurns = () => {
   const [turns, setTurns] = useState([{}]);
   const [vacancies, setVacancies] = useState([{}]);
+  const [date, setDate] = useState([{}]);
 
   useEffect(() => {
     getData();
     getVacancies();
+    getDate();
   }, []);
 
   const getData = async () => {
@@ -19,12 +23,30 @@ const BoxTurns = () => {
     setTurns(turnsinfo);
   };
 
+  const handleScrollRight = () => {
+    handleChange(500);
+  };
+  const handleScrollLeft = () => {
+    handleChange(-500);
+  };
+  const handleChange = (number) => {
+    document.getElementById("carousel__container").scrollLeft += number;
+  };
+
   const getVacancies = async () => {
     const url =
       "https://ape-bogota-react-default-rtdb.firebaseio.com/vacancies.json";
     const data = await fetch(url);
     const vacanciesinfo = await data.json();
     setVacancies(vacanciesinfo);
+  };
+
+  const getDate = async () => {
+    const url =
+      "https://ape-bogota-react-default-rtdb.firebaseio.com/date.json";
+    const data = await fetch(url);
+    const dateinfo = await data.json();
+    setDate(dateinfo);
   };
 
   const addingNewTurn = async (event) => {
@@ -63,6 +85,19 @@ const BoxTurns = () => {
     };
     await vacancieRef.set(newVacancie);
     getVacancies();
+  };
+
+  const updateDate = (event) => {
+    event.preventDefault();
+    const dateRef = firebase.database().ref("date");
+    const date = event.target.newdate.value;
+    const modalidad = event.target.modalidad.value;
+    const newDate = {
+      dia: date,
+      modalidad: modalidad,
+    };
+    dateRef.set(newDate);
+    getDate();
   };
 
   return (
@@ -146,7 +181,71 @@ const BoxTurns = () => {
           </label>
         </form>
       </div>
-      <VacanciesCarousel />
+      {/* Carousel */}
+      <section className="carousel">
+        {/* <SearchVacancies
+        searchValue={searchValue}
+        setSearchValue={setSearchValue}
+      /> */}
+        <div
+          onChange={handleChange}
+          id="carousel__container"
+          className=" flex gap-5 ml-3 font-sans overflow-x-auto overflow-y-hidden  items-center carousel__container sm:ml-6"
+        >
+          {vacancies ? (
+            Object.values(vacancies).map((item, index) => {
+              return (
+                <div
+                  className="py-2 px-4 carousel lg:py-6 3xl:py-28 carousel__item"
+                  key={index}
+                >
+                  <Card
+                    id={item.id}
+                    solicitud={
+                      item.solicitud ? item.solicitud.toUpperCase() : null
+                    }
+                    cargo={item.cargo}
+                    educacion1={
+                      item.educacion1 ? item.educacion1.toLowerCase() : null
+                    }
+                    educacion2={
+                      item.educacion2 ? item.educacion2.toLowerCase() : null
+                    }
+                    educacion3={
+                      item.educacion3 ? item.educacion3.toLowerCase() : null
+                    }
+                    descripcion={item.description}
+                    fechaPublicacion={item.fechaPublicacion}
+                  />
+                </div>
+              );
+            })
+          ) : (
+            <h1>En este momento no se encuentran vacantes disponibles</h1>
+          )}
+        </div>
+        <div id="container" className="arrows relative">
+          <div className="arrow__right">
+            <button
+              id="slide"
+              onClick={handleScrollRight}
+              className="bottom-48  h-32"
+            >
+              <img
+                className="w-6 origin-center transform rotate-180"
+                src={ArrowLeft}
+                alt="flecha_derecha"
+              />
+            </button>
+          </div>
+          <div className="arrow__left">
+            <button id="slide" onClick={handleScrollLeft} className=" h-32">
+              <img className="w-6" src={ArrowLeft} alt="flecha_izquierda" />
+            </button>
+          </div>
+        </div>
+      </section>
+
       <div className="flex text-3xl justify-center my-2">
         <h1>Agrega nuevas vacantes</h1>
       </div>
@@ -170,6 +269,7 @@ const BoxTurns = () => {
             className="bg-gray-300 rounded-full px-2"
             name="description"
             type="text"
+            maxLength={200}
             required
           />
         </label>
@@ -179,6 +279,7 @@ const BoxTurns = () => {
             className="bg-gray-300 rounded-full px-2"
             name="educacion1"
             type="text"
+            maxLength={10}
             required
           />
         </label>
@@ -188,6 +289,7 @@ const BoxTurns = () => {
             className="bg-gray-300 rounded-full px-2"
             name="educacion2"
             type="text"
+            maxLength={10}
             required
           />
         </label>
@@ -197,6 +299,7 @@ const BoxTurns = () => {
             className="bg-gray-300 flex-col rounded-full px-2"
             name="educacion3"
             type="text"
+            maxLength={10}
             required
           />
         </label>
@@ -205,7 +308,7 @@ const BoxTurns = () => {
           <input
             className="bg-gray-300 rounded-full px-2"
             name="fechaPublicacion"
-            type="text"
+            type="date"
             required
           />
         </label>
@@ -221,6 +324,49 @@ const BoxTurns = () => {
         <label className="self-center " htmlFor="">
           <input
             className="bg-blue-450 hover:bg-principal-100 text-white w-60 py-0.5 rounded-full cursor-pointer"
+            type="submit"
+          />
+        </label>
+      </form>
+      <div className="bg-gray-200 rounded-sm flex flex-col gap-2 font-sans tracking-tight mx-auto text-lg py-4 mb-4 w-11/12 max-w-md lg:grid lg:grid-cols-2 lg:max-w-none lg:text-xl 2xl:text-2xl 2xl:justify-center">
+        <article className="text-center font-bold text-xl text-blue-450 self-center p-2 py-auto lg:text-2xl 2xl:text-3xl">
+          <h1>ÚLTIMAS CONVOCATORIAS</h1>
+        </article>
+        <article className="flex justify-between px-3 gap-5 lg:justify-evenly">
+          <p className="bg-green-450 text-center rounded-sm shadow-2xl p-2 text-white pt-3 self-center lg:w-48 lg:font-semibold lg:pt-2 2xl:w-72">
+            DEL {date.dia}
+          </p>
+          <p className="text-blue-450 text-center w-96 lg:w-72 2xl:w-88">
+            Inscripciones a programas de formación en modalidad {date.modalidad}
+          </p>
+        </article>
+      </div>
+      <form
+        onSubmit={updateDate}
+        className="grid justify-items-center content-center grid-cols-2 gap-8 border-4 rounded-md m-8 p-8"
+        action=""
+      >
+        <label className="flex flex-col gap-2" htmlFor="">
+          <span>Fecha</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="newdate"
+            type="text"
+            required
+          />
+        </label>
+        <label className="flex flex-col gap-2" htmlFor="">
+          <span>Modalidad</span>
+          <input
+            className="bg-gray-300 rounded-full px-2"
+            name="modalidad"
+            type="text"
+            required
+          />
+        </label>
+        <label className="self-center col-span-2" htmlFor="">
+          <input
+            className="bg-blue-450 hover:bg-principal-100 text-white w-60 py-0.5 rounded-full cursor-pointer "
             type="submit"
           />
         </label>

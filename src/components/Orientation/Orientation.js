@@ -15,10 +15,26 @@ const Orientation = () => {
       />
       <Introduction />
       <div className="carousel__container3 flex flex-col items-center lg:grid lg:grid-cols-2 gap-8 lg:mx-10 lg:justify-items-center xl:mx-40">
-        <Card3 />
-        <Card3 />
-        <Card3 />
-        <Card3 />
+        <Card3
+          name="Taller de introducción al mundo laboral"
+          description="En este taller podrás entender como realizar tu hoja de vida, cómo presentar una entrevista."
+          link="https://apebogota.com"
+        />
+        <Card3
+          name="Taller de emociones y comunicación asertiva"
+          description="En este taller podrás entender como realizar tu hoja de vida, cómo presentar una entrevista."
+          link="https://apebogota.com"
+        />
+        <Card3
+          name="Taller de adaptabilidad laboral"
+          description="En este taller podrás entender como realizar tu hoja de vida, cómo presentar una entrevista."
+          link="https://apebogota.com"
+        />
+        <Card3
+          name="Taller de emociones y comunicación asertiva"
+          description="En este taller podrás entender como realizar tu hoja de vida, cómo presentar una entrevista."
+          link="https://apebogota.com"
+        />
       </div>
       <Video />
     </section>
